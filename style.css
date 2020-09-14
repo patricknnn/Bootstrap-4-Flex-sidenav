@@ -3,16 +3,18 @@
 /* ROOT */
 
 :root {
-  --color-bg-primary: #fafafa;
-  --color-bg-secondary:  rgba(234,234,234,1);
-  --color-bg-navbar:  rgba(255,255,255,1);
+  --color-bg-primary: #FAFAFA;
+  --color-bg-secondary: #EEEEEE;
+  --color-bg-navbar: #FFF;
+  --color-sublist-before: #BDBDBD;
 
-  --color-txt-primary: rgba(0, 0, 0, 0.9);
-  --color-txt-secondar: #6c757d;
+  --color-txt-primary: #212121;
+  --color-txt-secondary: #546E7A;
 
   --color-active:  rgba(0, 0, 0, 0.07);
   --color-hover: rgba(0, 0, 0, 0.09);
-  --color-border: rgba(0,0,0, 0.1);
+  --color-focus: rgba(0, 0, 0, 0.02);
+  --color-border: rgba(0,0,0, 0.125);
   --color-seperator: rgba(0,0,0, 0.1);
 
   --height-navbar: 48px;
@@ -30,12 +32,19 @@ body {
   font-family: 'Palanquin', sans-serif;
   background: var(--color-bg-primary);
 }
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 /* OVERRIDES */
 
 .navbar {
   background-color: var(--color-bg-navbar);
-  box-shadow:var(--color-border) 0 1px 0;
+  box-shadow: var(--color-border) 0 1px 0;
   height: var(--height-navbar);
 }
 
@@ -49,6 +58,7 @@ body {
 .page-wrapper {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .btn-group.show {
@@ -75,19 +85,19 @@ body {
   margin: 0 10px;
 }
 
+.expanded-only {
+  display: none;
+  transition: all var(--transition-duration);
+}
+.expanded .expanded-only {
+  display: flex;
+}
+
 /* NAVBAR */
 
 .navbar-image {
   max-height: var(--height-navbar);
   max-width: 100%;
-}
-
-.brand-content .expanded-only {
-  display: none;
-}
-
-.brand-content.expanded .expanded-only {
-  display: flex;
 }
 
 .brand-content {
@@ -128,13 +138,6 @@ body {
   flex-direction: row;
 }
 
-.sidebar-content .expanded-only {
-  display: none;
-}
-.sidebar-content.expanded .expanded-only {
-  display: flex;
-}
-
 .sidebar-item {
   color: var(--color-txt-primary);
 }
@@ -160,12 +163,12 @@ body {
   width: 0.25rem;
 }
 
-.sidebar-sub-items {
-  transition: all 0s;
+.sidebar-item::after {
+  display: none !important;
 }
+.sidebar-item.dropdown-toggle::before,
 .sidebar-sub-items::before {
-  transition: all 0s;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--color-sublist-before);
   bottom: 0;
   content: "";
   left: 0;
