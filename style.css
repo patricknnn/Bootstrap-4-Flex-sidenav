@@ -132,6 +132,16 @@ body {
   width: 0.25rem;
 }
 
+.sidebar-sub-items::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0.25rem;
+} 
+
 .sidebar-icon {
   padding-bottom: 12px;
   padding-top: 12px;
