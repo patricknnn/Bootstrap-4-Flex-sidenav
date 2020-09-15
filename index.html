@@ -32,12 +32,16 @@
 
         <!-- Brand -->
         <div id="brand" class="d-flex flex-column brand-content expanded px-2">
+
           <a id="navbar-brand" class="navbar-brand d-flex align-items-center p-0 m-0" href="#">
-            <img src="img/logo anker.jpg"
-              class="navbar-image py-2" alt="" loading="lazy">
+            <img src="img/logo anker.jpg" class="navbar-image py-2" alt="" loading="lazy">
             <span class="ml-3 expanded-only font-weight-bold txt-blue">Seacrew</span>
           </a>
         </div>
+
+
+        <button id="sidebarToggle" type="button" class="btn btn-primary">Toggle</button>
+
 
         <div id="breadcrumbs" class="d-flex flex-column flex-grow-1">
           <ol class="breadcrumb">
@@ -103,7 +107,8 @@
 
             <div class="d-flex flex-column flex-shrink-0 position-relative">
               <a href="#" class="d-flex flex-row flex-grow-1 align-items-center position-relative sidebar-item active">
-                <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-primary">
+                <span
+                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-primary">
                   <i class="zmdi zmdi-view-dashboard zmdi-hc-2x"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Dashboard</span>
@@ -112,7 +117,8 @@
 
             <div class="d-flex flex-column flex-shrink-0 position-relative">
               <a href="#" class="d-flex flex-row flex-grow-1 align-items-center position-relative sidebar-item">
-                <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-success">
+                <span
+                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-success">
                   <i class="zmdi zmdi-globe zmdi-hc-2x"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Globe</span>
@@ -122,7 +128,8 @@
             <div class="d-flex flex-column flex-shrink-0 position-relative">
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
                 class="d-flex flex-row flex-grow-1 align-items-center position-relative sidebar-item dropdown-toggle">
-                <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-danger">
+                <span
+                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-danger">
                   <i class="zmdi zmdi-google-pages zmdi-hc-2x"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Pages</span>
@@ -149,7 +156,8 @@
 
             <div class="d-flex flex-column flex-shrink-0 position-relative">
               <a href="#" class="d-flex flex-row flex-grow-1 align-items-center position-relative pr-2 sidebar-item">
-                <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-info">
+                <span
+                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-info">
                   <i class="zmdi zmdi-assignment-check zmdi-hc-2x"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Tasks</span>
@@ -158,7 +166,8 @@
 
             <div class="d-flex flex-column flex-shrink-0 position-relative">
               <a href="#" class="d-flex flex-row flex-grow-1 align-items-center position-relative pr-2 sidebar-item">
-                <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-warning">
+                <span
+                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-warning">
                   <i class="zmdi zmdi-fire zmdi-hc-2x"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Fire</span>
@@ -170,9 +179,11 @@
 
             <!-- Dropright button -->
             <div class="d-flex flex-column flex-shrink-0 position-relative btn-group dropright">
-              <a href="" class="d-flex flex-row flex-grow-1 align-items-center position-relative pl-0 sidebar-item dropdown-toggle"
+              <a href=""
+                class="d-flex flex-row flex-grow-1 align-items-center position-relative pl-0 sidebar-item dropdown-toggle"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-dark">
+                <span
+                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-dark">
                   <i class="zmdi zmdi-chart zmdi-hc-2x"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Chart</span>
@@ -290,7 +301,10 @@
 
   <script type="text/javascript">
     var collapse = $("#sidebarCollapse");
+    var toggle = $("#sidebarToggle");
     var sidebar = $(".sidebar-content");
+    var sidebarContainer = $(".sidebar-container");
+    var mainContainer = $(".main-container");
     var brand = $(".brand-content");
     var mql = window.matchMedia("(max-width: 768px)");
 
@@ -313,6 +327,18 @@
       brand.toggleClass("expanded");
       collapse.toggleClass("rotated-icon");
     });
+
+    toggle.on("click", () => {
+      var margin = parseInt(sidebarContainer.css("marginLeft").replace('px', ''));
+      if(margin == 0) {
+        sidebarContainer.css('margin-left', - sidebarContainer.width());
+        mainContainer.css('margin-left', 0);
+      } else {
+        sidebarContainer.css('margin-left', 0);
+      }
+      //sidebarContainer.css('margin-left', - sidebarContainer.width());
+    });
+
   </script>
 
 </body>

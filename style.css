@@ -113,6 +113,7 @@ body {
 
 /* SIDEBAR */
 .sidebar-container {
+  transition: all var(--transition-duration);
   background: var(--color-bg-secondary);
 }
 
