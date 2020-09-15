@@ -308,12 +308,16 @@
     var brand = $(".brand-content");
     var mql = window.matchMedia("(max-width: 768px)");
 
-    function responsive(e) {
-      if (e.matches) {
+    // init screen
+    responsive(mql);
+
+    function responsive(mql) {
+      if (mql.matches) { // Small screen
         sidebar.removeClass("expanded");
         brand.removeClass("expanded");
         collapse.addClass("rotated-icon");
-      } else {
+      } else { // Large screen
+        mainContainer.removeAttr("style");
         sidebar.addClass("expanded");
         brand.addClass("expanded");
         collapse.removeClass("rotated-icon");
@@ -323,21 +327,42 @@
     mql.addEventListener("change", responsive);
 
     collapse.on("click", () => {
+      setStyling();
       sidebar.toggleClass("expanded");
       brand.toggleClass("expanded");
       collapse.toggleClass("rotated-icon");
     });
 
     toggle.on("click", () => {
-      var margin = parseInt(sidebarContainer.css("marginLeft").replace('px', ''));
-      if(margin == 0) {
+      setStyling();
+      var sidebarContainerMargin = parseInt(sidebarContainer.css("marginLeft").replace('px', ''));
+      if (sidebarContainerMargin == 0) {
         sidebarContainer.css('margin-left', - sidebarContainer.width());
-        mainContainer.css('margin-left', 0);
-      } else {
+        mainContainer.css('left', 0);
+      }
+      else {
         sidebarContainer.css('margin-left', 0);
       }
-      //sidebarContainer.css('margin-left', - sidebarContainer.width());
+      
     });
+
+    function setStyling() {
+      if (mql.matches) {
+        if (!mainContainer.attr("style")) {
+          mainContainer.css('height', '100%');
+          mainContainer.css('position', 'absolute');
+          mainContainer.css('bottom', 0);
+          mainContainer.css('right', 0);
+          mainContainer.css('left', '48px');
+          mainContainer.css('top', '48px');
+        }
+        else {
+          mainContainer.animate({ height: '100%', }, 500, function () {
+            mainContainer.removeAttr("style");
+          });
+        }
+      }
+    }
 
   </script>
 

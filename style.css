@@ -115,6 +115,7 @@ body {
 .sidebar-container {
   transition: all var(--transition-duration);
   background: var(--color-bg-secondary);
+  z-index: 99;
 }
 
 .sidebar-content {
@@ -205,6 +206,7 @@ body {
 .main-content {
   overflow-x: hidden;
   overflow-y: auto;
+  transition: all var(--transition-duration);
 }
 
 
@@ -221,7 +223,7 @@ body {
     position: relative;
     width: var(--width-sidebar-small);
   }
-
+/* 
   .sidebar-container {
     position: absolute;
     height: calc(100% - var(--height-navbar));
@@ -236,6 +238,6 @@ body {
     margin-left: var(--width-sidebar-small);
     left: 0;
     bottom: 0;
-  }
+  } */
 
 }
