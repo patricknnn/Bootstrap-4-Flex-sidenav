@@ -30,26 +30,22 @@
       <!-- Navbar-->
       <nav class="navbar sticky-top navbar-light d-flex flex-row flex-grow-1 p-0">
 
-        <!-- Brand -->
-        <div id="brand" class="d-flex flex-column brand-content expanded px-2">
+        <div id="sidebarToggle" class="animated-burger-menu mx-3">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
+        <!-- Brand -->
+        <div id="brand" class="d-flex flex-column flex-grow-1 brand-content px-2">
           <a id="navbar-brand" class="navbar-brand d-flex align-items-center p-0 m-0" href="#">
             <img src="img/logo anker.jpg" class="navbar-image py-2" alt="" loading="lazy">
-            <span class="ml-3 expanded-only font-weight-bold txt-blue">Seacrew</span>
+            <span class="ml-3 font-weight-bold txt-blue">Seacrew</span>
           </a>
         </div>
 
 
-        <button id="sidebarToggle" type="button" class="btn btn-primary">Toggle</button>
-
-
-        <div id="breadcrumbs" class="d-flex flex-column flex-grow-1">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
-          </ol>
-        </div>
 
 
         <div class="d-flex flex-column flex-grow-0 dropdown h-100 mr-2">
@@ -300,41 +296,27 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script type="text/javascript">
+    // Define variables
     var collapse = $("#sidebarCollapse");
     var toggle = $("#sidebarToggle");
     var sidebar = $(".sidebar-content");
     var sidebarContainer = $(".sidebar-container");
     var mainContainer = $(".main-container");
-    var brand = $(".brand-content");
     var mql = window.matchMedia("(max-width: 768px)");
 
     // init screen
     responsive(mql);
-
-    function responsive(mql) {
-      if (mql.matches) { // Small screen
-        sidebar.removeClass("expanded");
-        brand.removeClass("expanded");
-        collapse.addClass("rotated-icon");
-      } else { // Large screen
-        mainContainer.removeAttr("style");
-        sidebar.addClass("expanded");
-        brand.addClass("expanded");
-        collapse.removeClass("rotated-icon");
-      }
-    }
-
+    // Add media listener
     mql.addEventListener("change", responsive);
 
+    // Collapse event listener
     collapse.on("click", () => {
-      setStyling();
       sidebar.toggleClass("expanded");
-      brand.toggleClass("expanded");
       collapse.toggleClass("rotated-icon");
     });
 
+    // Toggle event listener
     toggle.on("click", () => {
-      setStyling();
       var sidebarContainerMargin = parseInt(sidebarContainer.css("marginLeft").replace('px', ''));
       if (sidebarContainerMargin == 0) {
         sidebarContainer.css('margin-left', - sidebarContainer.width());
@@ -342,26 +324,38 @@
       }
       else {
         sidebarContainer.css('margin-left', 0);
+        mainContainer.css('left', '48px');
       }
-      
+      toggle.toggleClass('open');
     });
 
-    function setStyling() {
-      if (mql.matches) {
-        if (!mainContainer.attr("style")) {
-          mainContainer.css('height', '100%');
-          mainContainer.css('position', 'absolute');
-          mainContainer.css('bottom', 0);
-          mainContainer.css('right', 0);
-          mainContainer.css('left', '48px');
-          mainContainer.css('top', '48px');
-        }
-        else {
-          mainContainer.animate({ height: '100%', }, 500, function () {
-            mainContainer.removeAttr("style");
-          });
-        }
+    // Sets correct styling based on screen width
+    function responsive(mql) {
+      if (mql.matches) { // Small screen
+        addInlineStyling();
+        sidebar.removeClass("expanded");
+        collapse.addClass("rotated-icon");
+      } else { // Large screen
+        removeInlineStyling();
+        sidebar.addClass("expanded");
+        collapse.removeClass("rotated-icon");
       }
+    }
+
+    // Adds styling for main container
+    function addInlineStyling() {
+      mainContainer.css('height', '100%');
+      mainContainer.css('position', 'absolute');
+      mainContainer.css('bottom', 0);
+      mainContainer.css('right', 0);
+      mainContainer.css('left', '48px');
+      mainContainer.css('top', '48px');
+    }
+
+    // Removes styling for main
+    function removeInlineStyling() {
+      mainContainer.removeAttr("style");
+      sidebarContainer.removeAttr("style");
     }
 
   </script>
