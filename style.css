@@ -1,16 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 /* ROOT */
 
 :root {
-  --color-bg-primary: #FAFAFA;
-  --color-bg-secondary: #EEEEEE;
-  --color-bg-navbar: #FFF;
+  --color-dark: #272727;
+
   --color-sublist-before: #BDBDBD;
-
-  --color-txt-primary: #212121;
-  --color-txt-secondary: #546E7A;
-
   --color-active:  rgba(0, 0, 0, 0.07);
   --color-hover: rgba(0, 0, 0, 0.09);
   --color-focus: rgba(0, 0, 0, 0.02);
@@ -29,8 +24,11 @@
 /** GLOBALS **/
 
 body {
-  font-family: 'Palanquin', sans-serif;
-  background: var(--color-bg-primary);
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+	padding: 0;
 }
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
@@ -43,7 +41,6 @@ body {
 /* OVERRIDES */
 
 .navbar {
-  background-color: var(--color-bg-navbar);
   box-shadow: var(--color-border) 0 1px 0;
   height: var(--height-navbar);
 }
@@ -61,7 +58,6 @@ body {
 }
 
 .btn-clean {
-  color: var(--color-txt-primary);
   background-color: transparent !important;
   border: none !important;
   border-radius: 0 !important;
@@ -104,7 +100,6 @@ body {
 /* SIDEBAR */
 .sidebar-container {
   transition: all var(--transition-duration);
-  background: var(--color-bg-secondary);
   z-index: 99;
 }
 
@@ -113,7 +108,6 @@ body {
   width: var(--width-sidebar-small);
   transition: width var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
   border-right: 1px solid var(--color-border);
-  color: var(--color-txt-primary);
   white-space: nowrap;
 }
 .sidebar-content.expanded {
@@ -130,19 +124,13 @@ body {
   flex-direction: row;
 }
 
-.sidebar-item {
-  color: var(--color-txt-primary);
-}
-
 .sidebar-item.active {
-  color: var(--color-txt-primary);
   background-color: var(--color-active);
 }
 
 .sidebar-item:hover {
   text-decoration: none;
-  color: var(--color-txt-primary);
-  background-color: var(--color-hover);
+  background-color: var(--color-hover) !important;
 }
 
 .sidebar-item.active::before {
@@ -174,6 +162,11 @@ body {
   padding-top: 12px;
   height: var(--sidebar-icon-size) !important;
   width: var(--sidebar-icon-size) !important;
+}
+
+.sidebar-item:hover {
+  color: var(--color-dark) !important;
+  background-color: var(--color-hover) !important;
 }
 
 .rotated-icon {
@@ -231,7 +224,6 @@ body {
   position: absolute;
   height: 2px;
   width: 100%;
-  background: var(--color-txt-primary);
   border-radius: 9px;
   opacity: 1;
   left: 0;
