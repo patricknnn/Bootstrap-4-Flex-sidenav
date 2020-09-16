@@ -65,7 +65,7 @@
     <div class="d-flex flex-row flex-grow-1 overflow-hidden">
 
       <!-- Sidebar container-->
-      <aside class="d-flex flex-column sidebar-container">
+      <aside id="sidebar-container" class="d-flex flex-column sidebar-container">
         <!-- Sidebar content -->
         <div id="sidebar" class="d-flex flex-column flex-grow-1 sidebar-content expanded">
 
@@ -217,7 +217,7 @@
       </aside>
 
       <!-- Main container-->
-      <main class="d-flex flex-column flex-grow-1 overflow-hidden main-container">
+      <main id="main-container" class="d-flex flex-column flex-grow-1 overflow-hidden main-container">
 
         <!-- Main content -->
         <div class="d-flex flex-column flex-grow-1 main-content">
@@ -297,9 +297,9 @@
     // Define variables
     var sidebarCollapse = $("#sidebarCollapse");
     var sidebarToggle = $("#sidebarToggle");
-    var sidebarContent = $(".sidebar-content");
-    var sidebarContainer = $(".sidebar-container");
-    var mainContainer = $(".main-container");
+    var sidebarContent = $("#sidebar");
+    var sidebarContainer = $("#sidebar-container");
+    var mainContainer = $("#main-container");
     var mql = window.matchMedia("(max-width: 768px)");
 
     // init screen
@@ -345,8 +345,14 @@
       mainContainer.css('position', 'absolute');
       mainContainer.css('bottom', 0);
       mainContainer.css('right', 0);
-      mainContainer.css('left', '48px');
       mainContainer.css('top', '48px');
+      if(sidebarContainer.css('margin-left') == '0px') {
+        mainContainer.css('left', '48px');
+      }
+      else {
+        mainContainer.css('left', '0px');
+      }
+      
     }
 
     // Removes styling for main
