@@ -146,6 +146,7 @@ body {
 .sidebar-item::after {
   display: none !important;
 }
+
 .sidebar-item.dropdown-toggle::before,
 .sidebar-sub-items::before {
   background-color: var(--color-sublist-before);
