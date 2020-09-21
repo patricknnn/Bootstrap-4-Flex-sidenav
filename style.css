@@ -10,6 +10,7 @@
   --color-hover: rgba(200, 200, 200, 0.07);
   --color-focus: rgba(200, 200, 200, 0.02);
   --color-seperator: rgba(200, 200, 200, 0.5);
+  --color-border: rgba(0,0,0, 0.125);
 
   --height-navbar: 48px;
   --width-sidebar-small: 48px;
@@ -18,7 +19,6 @@
 
   --transition-duration: 200ms;
 }
-
 
 /** GLOBALS **/
  
