@@ -6,10 +6,10 @@
   --color-dark: #272727;
 
   --color-sublist-before: #BDBDBD;
-  --color-active:  rgba(0, 0, 0, 0.07);
-  --color-hover: rgba(0, 0, 0, 0.09);
-  --color-focus: rgba(0, 0, 0, 0.02);
-  --color-seperator: rgba(0,0,0, 0.1);
+  --color-active:  rgba(200, 200, 200, 0.09);
+  --color-hover: rgba(200, 200, 200, 0.07);
+  --color-focus: rgba(200, 200, 200, 0.02);
+  --color-seperator: rgba(200, 200, 200, 0.5);
 
   --height-navbar: 48px;
   --width-sidebar-small: 48px;
@@ -21,7 +21,7 @@
 
 
 /** GLOBALS **/
-
+ 
 body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -139,17 +139,43 @@ body {
   flex-direction: row;
 }
 
-.sidebar-item.active {
-  background-color: var(--color-active);
-}
+/* SIDEBAR ITEM */
 
+.sidebar-item {
+  color: inherit !important;
+  overflow: hidden;
+}
 .sidebar-item:hover {
   text-decoration: none;
+  color: inherit;
   background-color: var(--color-hover) !important;
 }
+.sidebar-item::after {
+  display: none !important;
+}
+.sidebar-item:not(.active)::before {
+  background-color: var(--color-sublist-before);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0.25rem;
+  transition-duration: var(--transition-duration);
+  transform: translateX(-0.25rem);
+}
+.sidebar-item:hover::before {
+  transition-duration: var(--transition-duration);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
 
+.sidebar-item.active {
+  color: inherit !important;
+  background-color: var(--color-active);
+}
 .sidebar-item.active::before {
-  background-color: rgba(0,120,212,1);
+  background-color: var(--color-sublist-before);
   bottom: 0;
   content: "";
   left: 0;
@@ -158,11 +184,6 @@ body {
   width: 0.25rem;
 }
 
-.sidebar-item::after {
-  display: none !important;
-}
-
-.sidebar-item.dropdown-toggle::before,
 .sidebar-sub-items::before {
   background-color: var(--color-sublist-before);
   bottom: 0;
@@ -171,18 +192,13 @@ body {
   position: absolute;
   top: 0;
   width: 0.25rem;
-} 
+}
 
 .sidebar-icon {
   padding-bottom: 12px;
   padding-top: 12px;
   height: var(--sidebar-icon-size) !important;
   width: var(--sidebar-icon-size) !important;
-}
-
-.sidebar-item:hover {
-  color: var(--color-dark) !important;
-  background-color: var(--color-hover) !important;
 }
 
 .rotated-icon {

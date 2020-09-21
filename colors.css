@@ -59,45 +59,45 @@
   background-color: var(--color-dark-secondary) !important;
 }
 .bg-white {
-  background-color: var(--color-white);
+  background-color: var(--color-white) !important;
 }
 .bg-white-muted {
-  background-color: var(--color-white-muted);
+  background-color: var(--color-white-muted) !important;
 }
 .bg-black {
-  background-color: var(--color-black);
+  background-color: var(--color-black) !important;
 }
 .bg-black-muted {
-  background-color: var(--color-black-muted);
+  background-color: var(--color-black-muted) !important;
 }
 
 /** Gradients */
 .bg-gradient-primary {
-  background: var(--color-gradient-primary);
+  background: var(--color-gradient-primary) !important;
 }
 .bg-gradient-accent {
-  background: var(--color-gradient-accent);
+  background: var(--color-gradient-accent) !important;
 }
 .bg-gradient-light {
-  background: var(--color-gradient-light);
+  background: var(--color-gradient-light) !important;
 }
 .bg-gradient-dark {
-  background: var(--color-gradient-dark);
+  background: var(--color-gradient-dark) !important;
 }
 .bg-gradient-orange {
-  background: var(--color-gradient-orange);
+  background: var(--color-gradient-orange) !important;
 }
 .bg-gradient-red {
-  background: var(--color-gradient-red);
+  background: var(--color-gradient-red) !important;
 }
 .bg-gradient-blue {
-  background: var(--color-gradient-blue);
+  background: var(--color-gradient-blue) !important;
 }
 .bg-gradient-green {
-  background: var(--color-gradient-green);
+  background: var(--color-gradient-green) !important;
 }
 .bg-gradient-purple {
-  background: var(--color-gradient-purple);
+  background: var(--color-gradient-purple) !important;
 }
 
 /** Text */
@@ -109,27 +109,27 @@
   color: var(--color-accent) !important;
 }
 .txt-white {
-  color: var(--color-white);
+  color: var(--color-white) !important;
 }
 .txt-white-muted {
-  color: var(--color-white-muted);
+  color: var(--color-white-muted) !important;
 }
 .txt-black {
-  color: var(--color-black);
+  color: var(--color-black) !important;
 }
 .txt-black-muted {
-  color: var(--color-black-muted);
+  color: var(--color-black-muted) !important;
 }
 .txt-light {
-  color: var(--color-light);
+  color: var(--color-light) !important;
 }
 .txt-light-muted {
-  color: rgba(var(--color-light), 0.54);
+  color: rgba(var(--color-light), 0.54) !important;
 }
 .txt-dark {
-  color: var(--color-dark);
+  color: var(--color-dark) !important;
 }
 .txt-dark-muted {
-  color: rgba(var(--color-dark), 0.54);
+  color: rgba(var(--color-dark), 0.54) !important;
 }
 
