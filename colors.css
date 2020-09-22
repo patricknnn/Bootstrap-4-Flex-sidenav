@@ -1,4 +1,3 @@
-
 /*************************************/
 /**              Root               **/
 /*************************************/
@@ -6,29 +5,36 @@
 :root {
   --color-primary: #002b58;
   --color-accent: #ab0035;
-  --color-gradient-primary: linear-gradient(60deg, #3a5385, #002b58);
-  --color-gradient-accent: linear-gradient(60deg, #e3495e, #ab0035);
+  --color-turquoise: #16a085;
+  --color-emerald: #27ae60;
+  --color-river: #2980b9;
+  --color-amethyst: #8e44ad;
+  --color-midnight-blue: #2c3e50;
+  --color-orange: #f39c12;
+  --color-pumpkin: #d35400;
+  --color-pomegranate: #c0392b;
+  --color-clouds: #bdc3c7;
+  --color-asbestos: #7f8c8d;
 
   --color-dark: #272727;
   --color-dark-secondary: #212121;
-  --color-gradient-dark: linear-gradient(60deg, #272727, #212121);
-
-  --color-light: #FAFAFA;
-  --color-light-secondary: #EEEEEE; 
-  --color-gradient-light: linear-gradient(60deg, #FAFAFA, #EEEEEE);
-
   --color-black: #000;
   --color-black-muted: rgba(#000, 0.54);
-
-  --color-white: #FFF;
-  --color-white-muted: rgba(#FFF, 0.54);
+  --color-light: #fafafa;
+  --color-light-secondary: #eeeeee;
+  --color-white: #fff;
+  --color-white-muted: rgba(#fff, 0.54);
 
   --color-facebook: #3b5998;
   --color-instagram: #f09433;
   --color-twitter: #55acee;
 
-  --color-gradient-blue: linear-gradient(60deg ,#26c6da, #0097a7);
-  --color-gradient-green: linear-gradient(60deg, #66bb6a ,#388e3c);
+  --color-gradient-primary: linear-gradient(60deg, #3a5385, #002b58);
+  --color-gradient-accent: linear-gradient(60deg, #e3495e, #ab0035);
+  --color-gradient-dark: linear-gradient(60deg, #272727, #212121);
+  --color-gradient-light: linear-gradient(60deg, #fafafa, #eeeeee);
+  --color-gradient-blue: linear-gradient(60deg, #26c6da, #0097a7);
+  --color-gradient-green: linear-gradient(60deg, #66bb6a, #388e3c);
   --color-gradient-orange: linear-gradient(60deg, #ffa726, #f57c00);
   --color-gradient-red: linear-gradient(60deg, #ef5350, #d32f2f);
   --color-gradient-purple: linear-gradient(60deg, #ab47bc, #7b1fa2);
@@ -37,6 +43,89 @@
 /*************************************/
 /**          Color Helpers          **/
 /*************************************/
+.sidebar-item-primary.active::before {
+  background-color: var(--color-primary);
+}
+.sidebar-item-primary .sidebar-icon {
+  color: var(--color-primary);
+}
+
+.sidebar-item-accent.active::before {
+  background-color: var(--color-accent);
+}
+.sidebar-item-accent .sidebar-icon {
+  color: var(--color-accent);
+}
+
+.sidebar-item-turquoise.active::before {
+  background-color: var(--color-turquoise);
+}
+.sidebar-item-turquoise .sidebar-icon {
+  color: var(--color-turquoise);
+}
+
+.sidebar-item-emerald.active::before {
+  background-color: var(--color-emerald);
+}
+.sidebar-item-emerald .sidebar-icon {
+  color: var(--color-emerald);
+}
+
+.sidebar-item-river.active::before {
+  background-color: var(--color-river);
+}
+.sidebar-item-river .sidebar-icon {
+  color: var(--color-river);
+}
+
+.sidebar-item-amethyst.active::before {
+  background-color: var(--color-amethyst);
+}
+.sidebar-item-amethyst .sidebar-icon {
+  color: var(--color-amethyst);
+}
+
+.sidebar-item-midnight-blue.active::before {
+  background-color: var(--color-midnight-blue);
+}
+.sidebar-item-midnight-blue .sidebar-icon {
+  color: var(--color-midnight-blue);
+}
+
+.sidebar-item-orange.active::before {
+  background-color: var(--color-orange);
+}
+.sidebar-item-orange .sidebar-icon {
+  color: var(--color-orange);
+}
+
+.sidebar-item-pumpkin.active::before {
+  background-color: var(--color-pumpkin);
+}
+.sidebar-item-pumpkin .sidebar-icon {
+  color: var(--color-pumpkin);
+}
+
+.sidebar-item-pomegranate.active::before {
+  background-color: var(--color-pomegranate);
+}
+.sidebar-item-pomegranate .sidebar-icon {
+  color: var(--color-pomegranate);
+}
+
+.sidebar-item-clouds.active::before {
+  background-color: var(--color-clouds);
+}
+.sidebar-item-clouds .sidebar-icon {
+  color: var(--color-clouds);
+}
+
+.sidebar-item-asbestos.active::before {
+  background-color: var(--color-asbestos);
+}
+.sidebar-item-asbestos .sidebar-icon {
+  color: var(--color-asbestos);
+}
 
 /** Backgrounds */
 
@@ -132,4 +221,3 @@
 .txt-dark-muted {
   color: rgba(var(--color-dark), 0.54) !important;
 }
-
