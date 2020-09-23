@@ -142,7 +142,7 @@ body {
   flex-direction: row;
 }
 
-.sidebar-collapse-wrapper {
+.sidebar-toggle-wrapper {
   left: 100%;
   height: var(--sidebar-collapse-wrapper-size);
   width: var(--sidebar-collapse-wrapper-size);
