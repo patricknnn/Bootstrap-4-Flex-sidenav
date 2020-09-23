@@ -5,6 +5,8 @@
 :root {
   --color-primary: #002b58;
   --color-accent: #ab0035;
+
+  /* Material */
   --color-turquoise: #16a085;
   --color-emerald: #27ae60;
   --color-river: #2980b9;
@@ -158,6 +160,77 @@
 }
 .bg-black-muted {
   background-color: var(--color-black-muted) !important;
+}
+
+
+.bg-turquoise {
+  background-color: var(--color-turquoise);
+}
+.txt-turquoise {
+  color: var(--color-turquoise);
+}
+
+.bg-emerald {
+  background-color: var(--color-emerald);
+}
+.txt-emerald {
+  color: var(--color-emerald);
+}
+
+.bg-river {
+  background-color: var(--color-river);
+}
+.txt-river {
+  color: var(--color-river);
+}
+
+.bg-amethyst {
+  background-color: var(--color-amethyst);
+}
+.txt-amethyst {
+  color: var(--color-amethyst);
+}
+
+.bg-midnight-blue {
+  background-color: var(--color-midnight-blue);
+}
+.txt-midnight-blue {
+  color: var(--color-midnight-blue);
+}
+
+.bg-orange {
+  background-color: var(--color-orange);
+}
+.txt-orange {
+  color: var(--color-orange);
+}
+
+.bg-pumpkin {
+  background-color: var(--color-pumpkin);
+}
+.txt-pumpkin {
+  color: var(--color-pumpkin);
+}
+
+.bg-pomegranate {
+  background-color: var(--color-pomegranate);
+}
+.txt-pomegranate {
+  color: var(--color-pomegranate);
+}
+
+.bg-clouds {
+  background-color: var(--color-clouds);
+}
+.txt-clouds {
+  color: var(--color-clouds);
+}
+
+.bg-asbestos {
+  background-color: var(--color-asbestos);
+}
+.txt-asbestos {
+  color: var(--color-asbestos);
 }
 
 /** Gradients */

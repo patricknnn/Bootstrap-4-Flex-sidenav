@@ -6,8 +6,8 @@
   --color-dark: #272727;
 
   --color-sublist-before: #BDBDBD;
-  --color-active:  rgba(0, 0, 0, 0.07);
-  --color-hover: rgba(0, 0, 0, 0.09);
+  --color-active:  rgba(0, 0, 0, 0.05);
+  --color-hover: rgba(0, 0, 0, 0.05);
   --color-focus: rgba(0, 0, 0, 0.02);
   --color-border: rgba(0,0,0, 0.125);
   --color-seperator: rgba(0,0,0, 0.1);
