@@ -16,6 +16,7 @@
   --width-sidebar-small: 48px;
   --width-sidebar-large: 260px;
   --sidebar-icon-size: 48px;
+  --sidebar-collapse-wrapper-size: 57px;
 
   --transition-duration: 200ms;
 }
@@ -141,13 +142,23 @@ body {
   flex-direction: row;
 }
 
+.sidebar-collapse-wrapper {
+  left: 100%;
+  height: var(--sidebar-collapse-wrapper-size);
+  width: var(--sidebar-collapse-wrapper-size);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
 /* SIDEBAR ITEM */
 
-.sidebar-item {
+.sidebar-item,
+.sidebar-sub-item {
   color: inherit !important;
   overflow: hidden;
 }
-.sidebar-item:hover {
+.sidebar-item:hover,
+.sidebar-sub-item:hover {
   text-decoration: none;
   color: inherit;
   background-color: var(--color-hover) !important;
@@ -224,6 +235,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   transition: all var(--transition-duration);
+  padding-top: var(--sidebar-collapse-wrapper-size);
 }
 
 /* CARDS */
