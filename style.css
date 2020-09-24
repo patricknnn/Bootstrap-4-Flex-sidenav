@@ -273,7 +273,7 @@ body {
 
 .animated-burger-menu {
   width: 25px;
-  height: 19px;
+  height: 16px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -289,7 +289,7 @@ body {
 .animated-burger-menu span {
   display: block;
   position: absolute;
-  height: 3px;
+  height: 2px;
   width: 100%;
   border-radius: 9px;
   opacity: 1;
@@ -310,11 +310,11 @@ body {
 
 .animated-burger-menu span:nth-child(2),
 .animated-burger-menu span:nth-child(3) {
-  top: 8px;
+  top: 7px;
 }
 
 .animated-burger-menu span:nth-child(4) {
-  top: 16px;
+  top: 14px;
 }
 
 .animated-burger-menu.open span:nth-child(1) {

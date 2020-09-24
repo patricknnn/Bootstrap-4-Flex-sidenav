@@ -65,8 +65,8 @@
   --color-light-secondary: #eeeeee;
   --color-white: #fff;
   --color-white-muted: rgba(255, 255, 255, 0.65);
-  --color-gradient-dark: linear-gradient(60deg, #272727, #212121);
-  --color-gradient-light: linear-gradient(60deg, #fafafa, #eeeeee); 
+  --color-gradient-dark: linear-gradient(60deg, var(--color-dark), var(--color-dark-secondary));
+  --color-gradient-light: linear-gradient(60deg, var(--color-light), var(--color-light-secondary)); 
 
   /* Social */
   --color-facebook: #3b5998;

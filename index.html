@@ -90,7 +90,7 @@
           <div class="d-flex flex-shrink-0 collapsible-section py-1 sidebar-header">
             <div class="d-flex flex-row flex-grow-1 align-items-center overflow-hidden">
               <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                <i class="fas fa-2x fa-ship"></i>
+                <i class="fas fa-lg fa-ship"></i>
               </span>
               <span class="flex-grow-1 expanded-only font-weight-bold">Company</span>
             </div>
@@ -109,7 +109,7 @@
               <a href="#"
                 class="d-flex flex-row flex-grow-1 align-items-center position-relative sidebar-item sidebar-item-red active">
                 <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                  <i class="fas fa-2x fa-home"></i>
+                  <i class="fas fa-lg fa-home"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Dashboard</span>
               </a>
@@ -119,7 +119,7 @@
               <a href="#"
                 class="d-flex flex-row flex-grow-1 align-items-center position-relative sidebar-item sidebar-item-purple">
                 <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                  <i class="fas fa-2x fa-globe-americas"></i>
+                  <i class="fas fa-lg fa-globe-americas"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Globe</span>
               </a>
@@ -129,7 +129,7 @@
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
                 class="d-flex flex-row flex-grow-1 align-items-center position-relative sidebar-item sidebar-item-indigo dropdown-toggle">
                 <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                  <i class="fas fa-2x fa-sticky-note"></i>
+                  <i class="fas fa-lg fa-newspaper"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Pages</span>
               </a>
@@ -157,7 +157,7 @@
               <a href="#"
                 class="d-flex flex-row flex-grow-1 align-items-center position-relative sidebar-item sidebar-item-lightgreen">
                 <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                  <i class="fas fa-2x fa-th-list"></i>
+                  <i class="fas fa-lg fa-th-list"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Tasks</span>
               </a>
@@ -169,7 +169,7 @@
                 class="d-flex flex-row flex-grow-1 align-items-center position-relative pl-0 sidebar-item sidebar-item-amber dropdown-toggle"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                  <i class="fas fa-2x fa-chart-pie"></i>
+                  <i class="fas fa-lg fa-chart-pie"></i>
                 </span>
                 <span class="flex-grow-1 expanded-only">Charts</span>
               </a>
@@ -202,14 +202,14 @@
             <a href="#"
               class="d-flex flex-row flex-grow-1 align-items-center overflow-hidden position-relative sidebar-item">
               <span>
-                <i class="fas fa-2x fa-cog d-flex flex-row align-items-center justify-content-center flex-shrink-0 sidebar-icon"></i>
+                <i class="fas fa-lg fa-cog d-flex flex-row align-items-center justify-content-center flex-shrink-0 sidebar-icon"></i>
               </span>
               <span class="expanded-only">Settings</span>
             </a>
 
             <div id="sidebarCollapse"
               class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon py-2">
-              <i class="fas fa-2x fa-chevron-left"></i>
+              <i class="fas fa-lg fa-chevron-left"></i>
             </div>
 
           </div>
@@ -238,9 +238,9 @@
           <!-- Main middle section -->
           <div class="d-flex flex-column flex-grow-1 main-middle">
             <div class="container-fluid pt-3">
+
+              <!-- COLORED CARDS -->
               <div class="row">
-
-
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
                   <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
                     <div class="col-4 d-flex align-items-center justify-content-center bg-blue-dark rounded-left">
@@ -255,7 +255,20 @@
                     </div>
                   </div>
                 </div>
-
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
+                  <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
+                    <div class="col-4 d-flex align-items-center justify-content-center bg-indigo-dark rounded-left">
+                      <i class="fas fa-3x fa-gift card-icon txt-light"></i>
+                    </div>
+                    <div class="col-8 py-3 bg-indigo rounded-right">
+                      <div class="h2 my-0 txt-light">2 <small>birthdays</small></div>
+                      <div class="txt-white-muted pt-1">
+                        <i class="far fa-clock"></i>
+                        <span>This month</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
                   <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
                     <div class="col-4 d-flex align-items-center justify-content-center bg-purple-dark rounded-left">
@@ -270,11 +283,28 @@
                     </div>
                   </div>
                 </div>
+              </div>
 
+              <!-- LIGHT CARDS -->
+              <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
                   <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
                     <div class="col-4 d-flex align-items-center justify-content-center bg-light-secondary rounded-left">
-                      <i class="fas fa-3x fa-gift card-icon txt-blue"></i>
+                      <i class="fas fa-3x fa-user-plus card-icon txt-blue"></i>
+                    </div>
+                    <div class="col-8 py-3 bg-light rounded-right">
+                      <div class="h2 my-0 txt-dark">170 <small>users</small></div>
+                      <div class="txt-black-muted pt-1">
+                        <i class="far fa-clock"></i>
+                        <span>This month</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
+                  <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
+                    <div class="col-4 d-flex align-items-center justify-content-center bg-light-secondary rounded-left">
+                      <i class="fas fa-3x fa-gift card-icon txt-indigo"></i>
                     </div>
                     <div class="col-8 py-3 bg-light rounded-right">
                       <div class="h2 my-0 txt-dark">2 <small>birthdays</small></div>
@@ -285,13 +315,22 @@
                     </div>
                   </div>
                 </div>
-
-
-
-
-
-
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
+                  <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
+                    <div class="col-4 d-flex align-items-center justify-content-center bg-light-secondary rounded-left">
+                      <i class="fas fa-3x fa-calendar-week card-icon txt-purple"></i>
+                    </div>
+                    <div class="col-8 py-3 bg-light rounded-right">
+                      <div class="h2 my-0 txt-dark">5 <small>activities</small></div>
+                      <div class="txt-black-muted pt-1">
+                        <i class="far fa-clock"></i>
+                        <span>This week</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
 
