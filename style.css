@@ -16,7 +16,6 @@
   --width-sidebar-small: 48px;
   --width-sidebar-large: 260px;
   --sidebar-icon-size: 48px;
-  --sidebar-collapse-wrapper-size: 57px;
 
   --transition-duration: 200ms;
 }
@@ -149,8 +148,8 @@ body {
 
 .sidebar-toggle-wrapper {
   left: 100%;
-  height: var(--sidebar-collapse-wrapper-size);
-  width: var(--sidebar-collapse-wrapper-size);
+  height: var(--sidebar-icon-size);
+  width: var(--sidebar-icon-size);
   border-right: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -224,14 +223,16 @@ body {
   transform: rotateY(-180deg);
 }
 
-#sidebarAdd,
-#sidebarCollapse {
+
+#sidebarCollapse,
+.sidebar-toggle-wrapper {
   cursor: pointer;
 }
-#sidebarAdd:hover,
-#sidebarCollapse:hover {
+
+#sidebarCollapse:hover,
+.sidebar-toggle-wrapper:hover {
   cursor: pointer;
-  background-color: var(--color-hover);
+  background-color: var(--color-hover) !important;
 }
 
 /* MAIN */
@@ -272,8 +273,8 @@ body {
 /* ANIMATED BURGER */
 
 .animated-burger-menu {
-  width: 25px;
-  height: 16px;
+  width: 22px;
+  height: 14px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -310,11 +311,11 @@ body {
 
 .animated-burger-menu span:nth-child(2),
 .animated-burger-menu span:nth-child(3) {
-  top: 7px;
+  top: 6px;
 }
 
 .animated-burger-menu span:nth-child(4) {
-  top: 14px;
+  top: 12px;
 }
 
 .animated-burger-menu.open span:nth-child(1) {
