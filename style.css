@@ -26,7 +26,12 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-/* Page wrapper, gets class 'sidebar-modal' on small screens */
+/* Closed */
+.closed {
+  display: none !important;
+}
+
+/* Page wrapper, gets class 'is-mobile' on small screens */
 .page-wrapper {
   display: flex;
   height: 100vh;
@@ -51,9 +56,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  position: absolute;
-  left: 0;
-  right: auto;
   height: 100%;
   width: 256px;
   z-index: 6;
@@ -67,7 +69,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sidebar-modal .sidebar {
+/* Sidebar mobile */
+.is-mobile .sidebar {
   position: fixed;
   box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2),
     0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
@@ -122,13 +125,8 @@ body {
 
 /* Main */
 .main {
-  position: relative;
-  margin-left: 256px;
-  margin-right: 0;
-}
-
-.sidebar-modal .main {
-  position: relative;
+  display: flex;
+  flex-grow: 1;
 }
 
 /* Topnav */
@@ -157,6 +155,7 @@ body {
   overflow: auto;
   height: 100%;
   padding: 0 18px;
+  padding-top: 70px;
 }
 
 /* MEDIA QUERIES */

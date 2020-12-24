@@ -61,7 +61,7 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <div style="min-height: 1000px"></div>
+        <div style="min-height: 5000px"></div>
       </div>
     </div>
   </div>
@@ -89,17 +89,19 @@
 
     // sidebarToggle event listener
     sidebarToggle.on('click', () => {
-      sidebar.toggleClass('sidebar-open');
+      sidebar.toggleClass('closed');
     });
 
     // Sets correct styling based on screen width
     function responsive(mql) {
       if (mql.matches) {
         // Small screen
-        pageWrapper.addClass('sidebar-modal');
+        pageWrapper.addClass('is-mobile');
+        sidebar.addClass('closed');
       } else {
         // Large screen
-        pageWrapper.removeClass('sidebar-modal');
+        pageWrapper.removeClass('is-mobile');
+        sidebar.removeClass('closed');
       }
     }
 
