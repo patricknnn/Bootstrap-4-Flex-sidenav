@@ -2,296 +2,69 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>BOOTSTRAP 4 FLEXBOX</title>
+  <title>Material Drawer</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="colors.css">
-
-  <!-- Material Iconic -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="colors.css" />
 </head>
 
 <body>
-
   <!-- Page wrapper -->
-  <div class="d-flex flex-column flex-grow-1 overflow-hidden bg-light txt-dark page-wrapper">
+  <div id="pageWrapper" class="page-wrapper">
 
-    <!-- Navbar wrapper -->
-    <div class="d-flex flex-row flex-shrink-0" role="navigation">
-      <!-- Navbar-->
-      <nav class="d-flex flex-row flex-grow-1 navbar sticky-top navbar-light bg-white p-0">
-
-        <div id="sidebarToggle" class="animated-burger-menu open mx-3">
-          <span class="bg-dark-secondary"></span>
-          <span class="bg-dark-secondary"></span>
-          <span class="bg-dark-secondary"></span>
-          <span class="bg-dark-secondary"></span>
-        </div>
-
-        <!-- Brand -->
-        <div id="brand" class="d-flex flex-column flex-grow-1 brand-content px-2">
-          <a id="navbar-brand" class="navbar-brand d-flex align-items-center p-0 m-0" href="#">
-            <img src="img/logo anker.jpg" class="navbar-image py-2" alt="" loading="lazy">
-            <span class="ml-3 font-weight-bold txt-primary">Seacrew</span>
+    <!-- Sidebar wrapper -->
+    <aside id="sidebar" class="sidebar">
+      <!-- Sidebar header -->
+      <div class="sidebar__header">
+        <h3 class="sidebar__title">Mail</h3>
+        <h6 class="sidebar__subtitle">email@material.io</h6>
+      </div>
+      <!-- Sidebar content -->
+      <div class="sidebar__content">
+        <nav class="nav-list">
+          <a class="nav-list-item" href="#" tabindex="-1" aria-selected="false">
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+            Inbox
           </a>
-        </div>
+        </nav>
+      </div>
+    </aside>
 
-        <div class="d-flex flex-column flex-grow-0 dropdown h-100 mr-2">
-          <a class="btn btn-clean txt-dark dropdown-toggle d-flex align-items-center h-100" href="#" role="button"
-            id="profileDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="https://colorlib.com/polygon/gentelella/images/img.jpg" width="30" height="30" alt=""
-              class="rounded-circle">
-            <span class="pl-2 pr-2">John Doe</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdownMenu">
-            <a class="dropdown-item" href="#"><i class="zmdi zmdi-account pr-2"></i>Profile</a>
-            <a class="dropdown-item" href="#"><i class="zmdi zmdi-close-circle pr-2"></i>Logout</a>
-          </div>
-        </div>
+    <!-- Overlay -->
+    <div class="overlay"></div>
 
-      </nav>
+    <!-- Main wrapper -->
+    <div class="main">
+      <!-- Topnav wrapper -->
+      <header class="topnav">
+        <div class="topnav__row">
+          <button id="sidebarToggle">menu</button>
+          <span class="topnav__title">Dismissible Drawer</span>
+        </div>
+      </header>
+
+      <!-- Content wrapper -->
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div style="min-height: 1000px"></div>
+      </div>
     </div>
-
-    <!-- Content wrapper -->
-    <div class="d-flex flex-row flex-grow-1 overflow-hidden">
-
-      <!-- Sidebar container-->
-      <aside id="sidebar-container" class="d-flex flex-column bg-light-secondary sidebar-container">
-        <!-- Sidebar content -->
-        <div id="sidebar" class="d-flex flex-column flex-grow-1 sidebar-content expanded">
-
-          <!-- Sidebar header -->
-          <div class="d-flex flex-shrink-0 collapsible-section py-1 sidebar-header">
-            <div class="d-flex flex-row flex-grow-1 align-items-center overflow-hidden">
-              <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                <i class="zmdi zmdi-boat zmdi-hc-2x"></i>
-              </span>
-              <span class="flex-grow-1 expanded-only font-weight-bold">Company</span>
-            </div>
-
-            <!-- Dropright button -->
-            <div id="sidebarAdd" class="d-flex flex-column flex-shrink-0 position-relative btn-group dropright">
-              <a href="" class="d-flex flex-row flex-grow-1 align-items-center position-relative txt-dark sidebar-item"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span
-                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center txt-dark sidebar-icon">
-                  <i class="zmdi zmdi-plus zmdi-hc-2x"></i>
-                </span>
-              </a>
-              <div class="dropdown-menu position-absolute">
-                <a class="dropdown-item" href="#">Add something</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Seperator -->
-          <div class="separator flex-row flex-shrink-0"></div>
-
-          <!-- Sidebar middle section -->
-          <!-- Dashboard, New Applicants, Crew Data, Crew on board, Planning, Companies -->
-          <!-- Codes(Generic, Ranks), Users(Users, Groups), Triggers(Qualifications per rank) -->
-          <!-- Authorization(Employees, Vessels), Reports(Nationalities, Ranks, Age categories) -->
-          <div class="d-flex flex-column flex-grow-1 sidebar-middle py-2">
-
-            <div class="d-flex flex-column flex-shrink-0 position-relative">
-              <a href="#"
-                class="d-flex flex-row flex-grow-1 align-items-center position-relative txt-dark sidebar-item active">
-                <span
-                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-primary">
-                  <i class="zmdi zmdi-view-dashboard zmdi-hc-2x"></i>
-                </span>
-                <span class="flex-grow-1 expanded-only">Dashboard</span>
-              </a>
-            </div>
-
-            <div class="d-flex flex-column flex-shrink-0 position-relative">
-              <a href="#"
-                class="d-flex flex-row flex-grow-1 align-items-center position-relative txt-dark sidebar-item">
-                <span
-                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-success">
-                  <i class="zmdi zmdi-globe zmdi-hc-2x"></i>
-                </span>
-                <span class="flex-grow-1 expanded-only">Globe</span>
-              </a>
-            </div>
-
-            <div class="d-flex flex-column flex-shrink-0 position-relative">
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                class="d-flex flex-row flex-grow-1 align-items-center position-relative txt-dark sidebar-item dropdown-toggle">
-                <span
-                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-danger">
-                  <i class="zmdi zmdi-google-pages zmdi-hc-2x"></i>
-                </span>
-                <span class="flex-grow-1 expanded-only">Pages</span>
-              </a>
-              <ul class="collapse list-unstyled sidebar-sub-items m-0" id="pageSubmenu">
-                <li>
-                  <a href="#"
-                    class="d-flex flex-row flex-grow-1 align-items-center position-relative txt-dark sidebar-item">
-                    <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                      <i class="zmdi zmdi-collection-item"></i>
-                    </span>
-                    <span class="flex-grow-1 expanded-only">Page 1</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="d-flex flex-row flex-grow-1 align-items-center position-relative txt-dark sidebar-item">
-                    <span class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon">
-                      <i class="zmdi zmdi-collection-item"></i>
-                    </span>
-                    <span class="flex-grow-1 expanded-only">Page 2</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="d-flex flex-column flex-shrink-0 position-relative">
-              <a href="#"
-                class="d-flex flex-row flex-grow-1 align-items-center position-relative txt-dark sidebar-item">
-                <span
-                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-info">
-                  <i class="zmdi zmdi-assignment-check zmdi-hc-2x"></i>
-                </span>
-                <span class="flex-grow-1 expanded-only">Tasks</span>
-              </a>
-            </div>
-
-            <div class="d-flex flex-column flex-shrink-0 position-relative">
-              <a href="#"
-                class="d-flex flex-row flex-grow-1 align-items-center position-relative txt-dark sidebar-item">
-                <span
-                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon text-warning">
-                  <i class="zmdi zmdi-fire zmdi-hc-2x"></i>
-                </span>
-                <span class="flex-grow-1 expanded-only">Fire</span>
-              </a>
-            </div>
-
-
-
-
-            <!-- Dropright button -->
-            <div class="d-flex flex-column flex-shrink-0 position-relative btn-group dropright">
-              <a href=""
-                class="d-flex flex-row flex-grow-1 align-items-center position-relative pl-0 txt-dark sidebar-item dropdown-toggle"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span
-                  class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center txt-dark sidebar-icon">
-                  <i class="zmdi zmdi-chart zmdi-hc-2x"></i>
-                </span>
-                <span class="flex-grow-1 expanded-only">Chart</span>
-              </a>
-              <div class="dropdown-menu position-absolute">
-                <a class="dropdown-item" href="#">Chart</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated chart</a>
-              </div>
-            </div>
-
-
-
-
-          </div>
-
-          <!-- Seperator -->
-          <div class="separator flex-row flex-shrink-0"></div>
-
-          <!-- Sidebar bottom section -->
-          <div class="d-flex flex-shrink-0 collapsible-section py-2">
-            <a href="#"
-              class="d-flex flex-row flex-grow-1 align-items-center overflow-hidden position-relative txt-dark sidebar-item">
-              <span>
-                <i
-                  class="zmdi zmdi-settings zmdi-hc-2x d-flex flex-row align-items-center justify-content-center flex-shrink-0 sidebar-icon"></i>
-              </span>
-              <span class="expanded-only">Settings</span>
-            </a>
-
-            <div id="sidebarCollapse"
-              class="d-flex flex-row flex-shrink-0 align-items-center justify-content-center sidebar-icon py-2">
-              <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
-            </div>
-
-          </div>
-
-        </div>
-      </aside>
-
-      <!-- Main container-->
-      <main id="main-container" class="d-flex flex-column flex-grow-1 overflow-hidden main-container">
-
-        <!-- Main content -->
-        <div class="d-flex flex-column flex-grow-1 main-content">
-
-          <!-- Main header -->
-          <div class="d-flex flex-shrink-0 main-header">
-            <div class="container-fluid pt-5">
-              <div class="row">
-                <div class="col-12">
-                  <h2>Dashboard</h2>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Main middle section -->
-          <div class="d-flex flex-column flex-grow-1 main-middle">
-            <div class="container-fluid pt-3">
-              <div class="row">
-
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
-                  <div class="card">
-                    <div class="card-header">Featured</div>
-                    <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                    <div class="card-footer text-muted">2 days ago</div>
-                  </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
-                  <div class="mat-card bg-white">
-                    <div class="d-flex flex-row align-items-center">
-                      <div class="d-flex flex-column flex-grow-1 justify-content-center">
-                        <h3 class="txt-dark">225,000</h3>
-                        <span>New users.</span>
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <i class="zmdi zmdi-account-add zmdi-hc-4x card-icon"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </main>
-
-    </div>
-
-
   </div>
-
-
-
 
   <!-- jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
@@ -302,78 +75,35 @@
 
   <script type="text/javascript">
     // Define variables
-    var sidebarCollapse = $("#sidebarCollapse");
-    var sidebarToggle = $("#sidebarToggle");
-    var sidebarContent = $("#sidebar");
-    var sidebarContainer = $("#sidebar-container");
-    var mainContainer = $("#main-container");
-    var mql = window.matchMedia("(max-width: 768px)");
+    var pageWrapper = $('#pageWrapper');
+    var sidebar = $('#sidebar');
+    var sidebarToggle = $('#sidebarToggle');
+    var overlay = $('#overlay');
+    var mql = window.matchMedia('(max-width: 768px)');
 
     // init screen
     responsive(mql);
-    // Add media listener
-    mql.addEventListener("change", responsive);
 
-    // sidebarCollapse event listener
-    sidebarCollapse.on("click", () => {
-      sidebarContent.toggleClass("expanded");
-      sidebarCollapse.toggleClass("rotated-icon");
-    });
+    // Add media listener
+    mql.addEventListener('change', responsive);
 
     // sidebarToggle event listener
-    sidebarToggle.on("click", () => {
-      var sidebarContainerMargin = parseInt(sidebarContainer.css("marginLeft").replace('px', ''));
-      (sidebarContainerMargin == 0) ? closeSidebar() : openSidebar();
+    sidebarToggle.on('click', () => {
+      sidebar.toggleClass('sidebar-open');
     });
-
-    // Opens sidebar
-    function openSidebar() {
-      sidebarContainer.css('margin-left', 0);
-      mainContainer.css('left', '48px');
-      sidebarToggle.addClass('open');
-    }
-
-    // Closes sidebar
-    function closeSidebar() {
-      sidebarContainer.css('margin-left', - sidebarContainer.width());
-      mainContainer.css('left', 0);
-      sidebarToggle.removeClass('open');
-    }
 
     // Sets correct styling based on screen width
     function responsive(mql) {
-      if (mql.matches) { // Small screen
-        addInlineStyling();
-        closeSidebar();
-      } else { // Large screen
-        removeInlineStyling();
-        openSidebar();
+      if (mql.matches) {
+        // Small screen
+        pageWrapper.addClass('sidebar-modal');
+      } else {
+        // Large screen
+        pageWrapper.removeClass('sidebar-modal');
       }
-    }
-
-    // Adds styling for main container
-    function addInlineStyling() {
-      mainContainer.css('position', 'absolute');
-      mainContainer.css('bottom', 0);
-      mainContainer.css('right', 0);
-      mainContainer.css('top', '48px');
-      if (sidebarContainer.css('margin-left') == '0px') {
-        mainContainer.css('left', '48px');
-      }
-      else {
-        mainContainer.css('left', '0px');
-      }
-
-    }
-
-    // Removes styling for main
-    function removeInlineStyling() {
-      mainContainer.removeAttr("style");
-      sidebarContainer.removeAttr("style");
     }
 
   </script>
-
 </body>
 
 </html>
