@@ -6,7 +6,7 @@
   --height-navbar: 48px;
   --width-sidebar: 260px;
   --sidebar-icon-size: 48px;
-  --transition-duration: 200ms;
+  --transition-duration: 5s;
 }
 
 /** GLOBALS **/
@@ -26,11 +26,6 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-/* Closed */
-.closed {
-  display: none !important;
-}
-
 /* Page wrapper, gets class 'is-mobile' on small screens */
 .page-wrapper {
   display: flex;
@@ -47,13 +42,16 @@ body {
   height: 100%;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.32);
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-mobile .overlay.visible {
+  display: block !important;
+  transition: all var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Sidebar */
 .sidebar {
-  display: flex;
+  display: none;
   flex-direction: column;
   flex-shrink: 0;
   height: 100%;
@@ -65,8 +63,10 @@ body {
   border-right-width: 1px;
   border-right-style: solid;
   border-color: rgba(0, 0, 0, 0.12);
-  transition-property: transform, -webkit-transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar.visible {
+  display: flex !important;
 }
 
 /* Sidebar mobile */
@@ -127,6 +127,7 @@ body {
 .main {
   display: flex;
   flex-grow: 1;
+  transition: all var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Topnav */

@@ -38,7 +38,7 @@
     </aside>
 
     <!-- Overlay -->
-    <div class="overlay"></div>
+    <div id="overlay" class="overlay"></div>
 
     <!-- Main wrapper -->
     <div class="main">
@@ -84,12 +84,17 @@
     // init screen
     responsive(mql);
 
-    // Add media listener
+    // Re-init screen on media change
     mql.addEventListener('change', responsive);
 
-    // sidebarToggle event listener
+    // Event listeners
     sidebarToggle.on('click', () => {
-      sidebar.toggleClass('closed');
+      sidebar.toggleClass('visible');
+      overlay.toggleClass('visible');
+    });
+    overlay.on('click', () => {
+      sidebar.removeClass('visible');
+      overlay.removeClass('visible');
     });
 
     // Sets correct styling based on screen width
@@ -97,11 +102,13 @@
       if (mql.matches) {
         // Small screen
         pageWrapper.addClass('is-mobile');
-        sidebar.addClass('closed');
+        sidebar.removeClass('visible');
+        overlay.removeClass('visible');
       } else {
         // Large screen
         pageWrapper.removeClass('is-mobile');
-        sidebar.removeClass('closed');
+        sidebar.addClass('visible');
+        overlay.removeClass('visible');
       }
     }
 
