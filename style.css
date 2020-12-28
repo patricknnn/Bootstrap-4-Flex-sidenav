@@ -41,7 +41,11 @@ body {
 
 .navbar {
   height: var(--height-navbar) !important;
-  box-shadow: var(--color-border) 0 1px 0;
+  box-shadow: var(--color-border) 0 1px 0 !important;
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
 }
 .dropdown-menu {
   border: none !important;
@@ -74,6 +78,20 @@ body {
   overflow: hidden;
 }
 
+.separator {
+  background-color: var(--color-seperator);
+  height: 1px;
+  margin: 0 10px;
+}
+
+.expanded-only {
+  display: none;
+  transition: all var(--transition-duration);
+}
+.expanded .expanded-only {
+  display: flex;
+}
+
 .btn-group.show {
   background-color: var(--color-hover) !important;
 }
@@ -92,20 +110,6 @@ body {
   box-shadow: none !important;
 }
 
-.separator {
-  background-color: var(--color-seperator);
-  height: 1px;
-  margin: 0 10px;
-}
-
-.expanded-only {
-  display: none;
-  transition: all var(--transition-duration);
-}
-.expanded .expanded-only {
-  display: flex;
-}
-
 /* NAVBAR */
 
 .navbar-image {
@@ -120,6 +124,7 @@ body {
 }
 
 /* SIDEBAR */
+
 .sidebar-container {
   transition: all var(--transition-duration);
   z-index: 99;
@@ -146,7 +151,7 @@ body {
   flex-direction: row;
 }
 
-.sidebar-toggle-wrapper {
+#sidebarToggleWrapper {
   left: 100%;
   height: var(--sidebar-icon-size);
   width: var(--sidebar-icon-size);
@@ -225,12 +230,12 @@ body {
 
 
 #sidebarCollapse,
-.sidebar-toggle-wrapper {
+#sidebarToggleWrapper {
   cursor: pointer;
 }
 
 #sidebarCollapse:hover,
-.sidebar-toggle-wrapper:hover {
+#sidebarToggleWrapper:hover {
   cursor: pointer;
   background-color: var(--color-hover) !important;
 }

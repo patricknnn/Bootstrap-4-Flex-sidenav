@@ -26,6 +26,7 @@
 
     <!-- Navbar wrapper -->
     <div class="d-flex flex-row flex-shrink-0" role="navigation">
+      
       <!-- Navbar-->
       <nav class="d-flex flex-row flex-grow-1 navbar sticky-top navbar-light bg-white p-0">
 
@@ -70,11 +71,9 @@
       <aside id="sidebar-container"
         class="d-flex flex-column position-relative bg-light-secondary txt-dark sidebar-container">
 
-        <!-- Sidebar Collapse -->
-        <div
-          class="d-flex align-items-center justify-content-center position-absolute bg-light-secondary sidebar-toggle-wrapper elevation-1">
-
-          <!-- Sidebar toggle -->
+        <!-- Sidebar Toggle -->
+        <div id="sidebarToggleWrapper"
+          class="d-flex align-items-center justify-content-center position-absolute bg-light-secondary elevation-1">
           <div id="sidebarToggle" class="animated-burger-menu open">
             <span class="bg-dark-secondary"></span>
             <span class="bg-dark-secondary"></span>
@@ -189,9 +188,6 @@
               </div>
             </div>
 
-
-
-
           </div>
 
           <!-- Seperator -->
@@ -202,7 +198,8 @@
             <a href="#"
               class="d-flex flex-row flex-grow-1 align-items-center overflow-hidden position-relative sidebar-item">
               <span>
-                <i class="fas fa-lg fa-cog d-flex flex-row align-items-center justify-content-center flex-shrink-0 sidebar-icon"></i>
+                <i
+                  class="fas fa-lg fa-cog d-flex flex-row align-items-center justify-content-center flex-shrink-0 sidebar-icon"></i>
               </span>
               <span class="expanded-only">Settings</span>
             </a>
@@ -241,7 +238,7 @@
 
               <!-- ICON CARDS -->
               <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 py-3">
                   <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
                     <div class="col-4 d-flex align-items-center justify-content-center bg-blue-dark rounded-left">
                       <i class="fas fa-3x fa-user-plus card-icon txt-light"></i>
@@ -255,7 +252,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 py-3">
                   <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
                     <div class="col-4 d-flex align-items-center justify-content-center bg-light-secondary rounded-left">
                       <i class="fas fa-3x fa-gift card-icon txt-indigo"></i>
@@ -269,7 +266,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 py-3">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12 py-3">
                   <div class="card mat-card flex-row align-items-center align-items-stretch elevation-3">
                     <div class="col-4 d-flex align-items-center justify-content-center bg-light-secondary rounded-left">
                       <i class="fas fa-3x fa-calendar-week card-icon txt-purple"></i>
@@ -313,27 +310,33 @@
     // Define variables
     var sidebarCollapse = $("#sidebarCollapse");
     var sidebarToggle = $("#sidebarToggle");
+    var sidebarToggleWrapper = $("#sidebarToggleWrapper");
     var sidebarContent = $("#sidebar");
     var sidebarContainer = $("#sidebar-container");
     var mainContainer = $("#main-container");
     var mql = window.matchMedia("(max-width: 768px)");
 
-    // init screen
-    responsive(mql);
-    // Add media listener
-    mql.addEventListener("change", responsive);
+    // Execute when page is ready
+    $(document).ready(function() {
+      // init screen
+      responsive(mql);
 
-    // sidebarCollapse event listener
-    sidebarCollapse.on("click", () => {
-      sidebarContent.toggleClass("expanded");
-      sidebarCollapse.toggleClass("rotated-icon");
+      // Add media listener
+      mql.addEventListener("change", responsive);
+
+      // sidebarCollapse event listener
+      sidebarCollapse.on("click", () => {
+        sidebarContent.toggleClass("expanded");
+        sidebarCollapse.toggleClass("rotated-icon");
+      });
+
+      // sidebarToggle event listener
+      sidebarToggleWrapper.on("click", () => {
+        var sidebarContainerMargin = parseInt(sidebarContainer.css("marginLeft").replace('px', ''));
+        (sidebarContainerMargin == 0) ? closeSidebar() : openSidebar();
+      });
     });
 
-    // sidebarToggle event listener
-    sidebarToggle.on("click", () => {
-      var sidebarContainerMargin = parseInt(sidebarContainer.css("marginLeft").replace('px', ''));
-      (sidebarContainerMargin == 0) ? closeSidebar() : openSidebar();
-    });
 
     // Opens sidebar
     function openSidebar() {
@@ -360,7 +363,7 @@
       }
     }
 
-    // Adds styling for main container
+    // Adds styling to main container
     function addInlineStyling() {
       mainContainer.css('position', 'absolute');
       mainContainer.css('bottom', 0);
@@ -375,7 +378,7 @@
 
     }
 
-    // Removes styling for main
+    // Removes styling from main and sidebar
     function removeInlineStyling() {
       mainContainer.removeAttr("style");
       sidebarContainer.removeAttr("style");
