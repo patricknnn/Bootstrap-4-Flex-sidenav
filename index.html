@@ -6,18 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Material Drawer</title>
+  <title>Flex sidebar</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <!-- Font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="colors.css" />
 </head>
 
 <body>
+
   <!-- Page wrapper -->
   <div id="pageWrapper" class="page-wrapper">
 
@@ -47,23 +48,33 @@
       <!-- Topnav wrapper -->
       <header class="topnav">
         <div class="topnav__row">
-          <button id="sidebarToggle">menu</button>
+          <button type="button" id="sidebarToggle" class="btn btn-clean btn-icon">
+            <i class="fas fa-bars"></i>
+          </button>
           <span class="topnav__title">Dismissible Drawer</span>
         </div>
       </header>
 
       <!-- Content wrapper -->
       <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <div style="min-height: 5000px"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div style="min-height: 5000px"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
