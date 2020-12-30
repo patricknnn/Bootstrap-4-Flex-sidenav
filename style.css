@@ -123,9 +123,13 @@ body {
   align-items: center;
   margin: 4px 8px;
   color: var(--color-sidebar-text);
+  transition: var(--transition-property) var(--transition-duration)
+  var(--transition-timing-function) var(--transition-delay);
 }
-.sidebar .nav-link:hover {
+.sidebar .nav-link:not(.active):hover {
   background-color: rgba(255, 255, 255, 0.1);
+  transition: var(--transition-property) var(--transition-duration)
+  var(--transition-timing-function) var(--transition-delay);
 }
 .sidebar .nav-link i {
   width: 24px;
@@ -141,7 +145,7 @@ body {
   var(--transition-timing-function) var(--transition-delay);
 }
 .sidebar .nav-link:not(.collapsed) .collapse-icon {
-  transform: rotate(180deg);
+  transform: rotateX(180deg);
   transition: var(--transition-property) var(--transition-duration)
   var(--transition-timing-function) var(--transition-delay);
 }
