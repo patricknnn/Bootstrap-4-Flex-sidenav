@@ -29,54 +29,152 @@
         <h3 class="sidebar__title">Mail</h3>
         <h6 class="sidebar__subtitle">email@material.io</h6>
       </div>
+      <!-- Divider -->
+      <hr class="sidebar__divider">
       <!-- Sidebar content -->
       <div class="sidebar__content">
-        <nav class="nav-list">
-          <a class="nav-list-item" href="#" tabindex="-1" aria-selected="false">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-            Inbox
-          </a>
+        <nav id="sidenav" class="nav nav-pills accordion flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <i class="fas fa-th-large mr-3"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-users mr-3"></i> Employees
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-th-large mr-3"></i> Layouts
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-box mr-3"></i> Components
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-wrench mr-3"></i> Utilities
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-table mr-3"></i> Tables
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-chart-line mr-3"></i> Charts
+            </a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item">
+            <a class="nav-link collapsed" data-toggle="collapse" href="#dropdownCollapse" role="button"
+              aria-expanded="false" aria-controls="dropdownCollapse">
+              <i class="fas fa-compress mr-3"></i>
+              Dropdown
+              <i class="collapse-icon fas fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div id="dropdownCollapse" class="collapse" data-parent="#sidenav">
+              <nav class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-table mr-3"></i> Tables
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-chart-line mr-3"></i> Charts
+            </a>
+          </li>
         </nav>
       </div>
-    </aside>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-toggle="collapse" href="#dropdown2Collapse" role="button"
+          aria-expanded="false" aria-controls="dropdown2Collapse">
+          <i class="fas fa-compress mr-3"></i>
+          Another one
+          <i class="collapse-icon fas fa-chevron-down" aria-hidden="true"></i>
+        </a>
+        <div id="dropdown2Collapse" class="collapse" data-parent="#sidenav">
+          <nav class="nav nav-pills flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-table mr-3"></i> Tables
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-chart-line mr-3"></i> Charts
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-table mr-3"></i> Tables
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-chart-line mr-3"></i> Charts
+        </a>
+      </li>
+      </nav>
+  </div>
+  </li>
+  </nav>
+  </div>
+  <!-- Divider -->
+  <hr class="sidebar__divider">
+  <!-- Sidebar footer -->
+  <div class="sidebar__footer">
+    <div class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-cog mr-3"></i> Settings
+      </a>
+    </div>
+  </div>
+  </aside>
 
-    <!-- Overlay -->
-    <div id="overlay" class="overlay"></div>
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
 
-    <!-- Main wrapper -->
-    <div class="main">
-      <!-- Topnav wrapper -->
-      <header class="topnav">
-        <div class="topnav__row">
-          <button type="button" id="sidebarToggle" class="btn btn-clean btn-icon">
-            <i class="fas fa-bars"></i>
-          </button>
-          <span class="topnav__title">Dismissible Drawer</span>
-        </div>
-      </header>
+  <!-- Main wrapper -->
+  <div class="main">
+    <!-- Topnav wrapper -->
+    <header class="topnav">
+      <div class="topnav__row">
+        <button type="button" id="sidebarToggle" class="btn btn-clean btn-icon">
+          <i class="fas fa-bars"></i>
+        </button>
+        <span class="topnav__title">Dismissible Drawer</span>
+      </div>
+    </header>
 
-      <!-- Content wrapper -->
-      <div class="content">
+    <!-- Content wrapper -->
+    <div class="content">
 
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <div style="min-height: 5000px"></div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div style="min-height: 5000px"></div>
           </div>
         </div>
-
       </div>
+
     </div>
+  </div>
   </div>
 
   <!-- jQuery -->
