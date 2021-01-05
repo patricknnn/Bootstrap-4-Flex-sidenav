@@ -90,7 +90,7 @@
               aria-expanded="false" aria-controls="dropdownCollapse">
               <i class="fas fa-compress mr-3"></i>
               Dropdown
-              <i class="collapse-icon fas fa-chevron-down" aria-hidden="true"></i>
+              <i class="collapse-icon fas fa-chevron-up" aria-hidden="true"></i>
             </a>
             <div id="dropdownCollapse" class="collapse" data-parent="#sidenav">
               <ul class="nav nav-nested nav-pills flex-column">
@@ -115,7 +115,7 @@
               aria-expanded="false" aria-controls="dropdown2Collapse">
               <i class="fas fa-compress mr-3"></i>
               Another one
-              <i class="collapse-icon fas fa-chevron-down" aria-hidden="true"></i>
+              <i class="collapse-icon fas fa-chevron-up" aria-hidden="true"></i>
             </a>
             <div id="dropdown2Collapse" class="collapse" data-parent="#sidenav">
               <ul class="nav nav-nested nav-pills flex-column">
@@ -179,27 +179,23 @@
           <div class="topnav__profile">
 
             <a class="btn btn-clean" href="#" role="button" id="profileDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img class="profile-image mr-2" src="https://sb-admin-pro.startbootstrap.com/assets/img/illustrations/profiles/profile-1.png" alt="">
-              <span class="mr-2">Profile</span> 
+              <img class="profile-image img-thumbnail mr-2" src="https://sb-admin-pro.startbootstrap.com/assets/img/illustrations/profiles/profile-1.png" alt="">
+              <span class="mr-2 d-none d-sm-block">Profile</span> 
               <i class="collapse-icon fas fa-chevron-down" aria-hidden="true"></i>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdownMenu">
-              <ul class="nav nav-pills accordion flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="fas fa-id-badge mr-3"></i>
-                    Profile
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="fas fa-sign-out-alt mr-3"></i>
-                    Logout
-                  </a>
-                </li>
-              </ul>
+              <h6 class="dropdown-header">Profile</h6>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-id-badge mr-2"></i>
+                Profile
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-sign-out-alt mr-2"></i>
+                Logout
+              </a>
             </div>
+
           </div>
         </div>
       </header>
@@ -278,7 +274,7 @@
         // Large screen
         pageWrapper.removeClass('is-mobile');
         sidebar.addClass('visible');
-        overlay.removeClass('visible');
+        overlay.addClass('visible');
       }
     }
 
