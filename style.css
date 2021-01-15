@@ -16,7 +16,7 @@
   --color-accent: rgb(164, 210, 240);
   --color-accent-muted: rgba(164, 210, 240, 0.4);
   --color-secondary: #7aacb7;
-  
+
   --color-light: #fafafa;
   --color-light-alt: #ededed;
   --color-dark: #211a1d;
@@ -49,6 +49,24 @@ body {
 
 a:hover {
   color: inherit;
+}
+
+/***************************************/
+/*****         Page loader         *****/
+/***************************************/
+.page-loader {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1030;
+  background-color: var(--color-light);
+  height: 100vh;
+  width: 100vw;
+}
+
+.page-loader.visible {
+  display: flex;
 }
 
 /***************************************/
@@ -402,13 +420,13 @@ a:focus {
 
 .table td,
 .table th {
-  padding: .5rem;
+  padding: 0.5rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
 }
 
 .page-link {
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   margin-left: -1px;
   line-height: 1.25;
   color: var(--color-dark);
@@ -419,6 +437,45 @@ a:focus {
 .page-item.active .page-link {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
+}
+
+/***************************************/
+/*****        Loading ring         *****/
+/***************************************/
+.loading-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid var(--color-primary);
+  border-radius: 50%;
+  animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--color-primary) transparent transparent transparent;
+}
+.loading-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loading-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loading-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* MEDIA QUERIES */

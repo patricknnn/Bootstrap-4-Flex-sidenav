@@ -20,6 +20,16 @@
 
 <body>
 
+  <!-- Page loader -->
+  <div id="pageLoader" class="page-loader visible">
+    <div class="loading-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
   <!-- Page wrapper -->
   <div id="pageWrapper" class="page-wrapper">
 
@@ -878,54 +888,60 @@
 
   <!-- Custom scripts -->
   <script type="text/javascript">
-    // Define variables
-    var pageWrapper = $('#pageWrapper');
-    var sidebar = $('#sidebar');
-    var sidebarToggle = $('#sidebarToggle');
-    var overlay = $('#overlay');
-    var navLinks = $('.nav-link');
-    var mql = window.matchMedia('(max-width: 768px)');
+    $(function() {
+      // Define variables
+      var pageWrapper = $('#pageWrapper');
+      var pageLoader = $('#pageLoader');
+      var sidebar = $('#sidebar');
+      var sidebarToggle = $('#sidebarToggle');
+      var overlay = $('#overlay');
+      var navLinks = $('.nav-link');
+      var mql = window.matchMedia('(max-width: 768px)');
 
-    // init screen
-    responsive(mql);
+      // init screen
+      responsive(mql);
 
-    // Re-init screen on media change
-    mql.addEventListener('change', responsive);
+      // Re-init screen on media change
+      mql.addEventListener('change', responsive);
 
-    // Event listeners
-    sidebarToggle.on('click', () => {
-      sidebar.toggleClass('visible');
-      overlay.toggleClass('visible');
-    });
-    overlay.on('click', () => {
-      sidebar.removeClass('visible');
-      overlay.removeClass('visible');
-    });
-    navLinks.on('click', (e) => {
-      if (!e.target.classList.contains('navlink-dropdown')) {
-        navLinks.removeClass('active');
-        $(e.target).addClass('active');
-      }
-    });
-
-    // Sets correct styling based on screen width
-    function responsive(mql) {
-      if (mql.matches) {
-        // Small screen
-        pageWrapper.addClass('is-mobile');
+      // Event listeners
+      sidebarToggle.on('click', () => {
+        sidebar.toggleClass('visible');
+        overlay.toggleClass('visible');
+      });
+      overlay.on('click', () => {
         sidebar.removeClass('visible');
         overlay.removeClass('visible');
-      } else {
-        // Large screen
-        pageWrapper.removeClass('is-mobile');
-        sidebar.addClass('visible');
-        overlay.addClass('visible');
+      });
+      navLinks.on('click', (e) => {
+        if (!e.target.classList.contains('navlink-dropdown')) {
+          navLinks.removeClass('active');
+          $(e.target).addClass('active');
+        }
+      });
+
+      // Sets correct styling based on screen width
+      function responsive(mql) {
+        if (mql.matches) {
+          // Small screen
+          pageWrapper.addClass('is-mobile');
+          sidebar.removeClass('visible');
+          overlay.removeClass('visible');
+        } else {
+          // Large screen
+          pageWrapper.removeClass('is-mobile');
+          sidebar.addClass('visible');
+          overlay.addClass('visible');
+        }
       }
-    }
 
-    // Datatable
-    $('#exampleTable').DataTable();
+      // Datatable
+      $('#exampleTable').DataTable();
 
+      // Remove loading
+      pageLoader.removeClass('visible');
+      
+    });
   </script>
 </body>
 
