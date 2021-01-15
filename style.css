@@ -59,8 +59,9 @@
   --transition-delay: 0s;
 }
 
-/** GLOBALS **/
-
+/***************************************/
+/*****          Globals            *****/
+/***************************************/
 body {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -79,6 +80,7 @@ body {
 a:hover {
   color: inherit;
 }
+
 
 /***************************************/
 /*****         Page loader         *****/
@@ -142,6 +144,7 @@ a:hover {
   }
 }
 
+
 /***************************************/
 /*****         Page wrapper        *****/
 /***************************************/
@@ -152,6 +155,7 @@ a:hover {
   overflow: hidden;
   font-size: var(--font-size);
 }
+
 
 /***************************************/
 /*****          Overlay            *****/
@@ -173,6 +177,7 @@ a:hover {
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
+
 
 /***************************************/
 /*****          Sidebar            *****/
@@ -247,6 +252,7 @@ a:hover {
   flex-shrink: 0;
 }
 
+
 /***************************************/
 /*****          Main            *****/
 /***************************************/
@@ -258,6 +264,7 @@ a:hover {
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
+
 
 /***************************************/
 /*****          Topnav            *****/
@@ -297,6 +304,7 @@ a:hover {
   border-radius: 50%;
 }
 
+
 /***************************************/
 /*****          Content            *****/
 /***************************************/
@@ -308,6 +316,7 @@ a:hover {
   background-color: var(--color-light);
   color: var(--color-dark);
 }
+
 
 /***************************************/
 /*****          Collapse icon      *****/
@@ -327,6 +336,7 @@ a:hover {
 .show .collapse-icon {
   transform: rotateX(180deg);
 }
+
 
 /***************************************/
 /*****          Buttons            *****/
@@ -353,6 +363,7 @@ a:focus {
   height: var(--size-button-icon);
   font-size: var(--size-button-icon-font);
 }
+
 
 /***************************************/
 /*****          Dropdowns          *****/
@@ -385,6 +396,7 @@ a:focus {
 .dropdown-menu .dropdown-item i:first-child {
   width: 24px;
 }
+
 
 /***************************************/
 /*****          Navs               *****/
@@ -425,6 +437,7 @@ a:focus {
   margin: 0px 8px;
   border-radius: 0.25rem;
 }
+
 
 /***************************************/
 /*****          Cards              *****/
@@ -471,10 +484,10 @@ a:focus {
   text-align: center;
 }
 
+
 /***************************************/
 /*****          Tables             *****/
 /***************************************/
-
 .table thead,
 .table tfoot {
   background-color: var(--color-primary);
@@ -484,14 +497,21 @@ a:focus {
 
 .table thead tr th:first-child,
 .table tfoot tr th:first-child {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
 }
 
 .table thead tr th:last-child,
 .table tfoot tr th:last-child {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.table thead tr th::before {
+  bottom: 0.75em !important;
+}
+.table thead tr th::after {
+  bottom: 0.75em !important;
 }
 
 .table td,
@@ -515,69 +535,10 @@ a:focus {
   border-color: var(--color-primary);
 }
 
-/***************************************/
-/*****          Colors             *****/
-/***************************************/
-
-.bg-red {
-  background-color: #f44336 !important;
-}
-.bg-purple {
-  background-color: #e040fb !important;
-}
-.bg-deeppurple {
-  background-color: #673ab7 !important;
-}
-.bg-indigo {
-  background-color: #536dfe !important;
-}
-.bg-blue {
-  background-color: #2196f3 !important;
-}
-.bg-lightblue {
-  background-color: #03a9f4 !important;
-}
-.bg-cyan {
-  background-color: #00bcd4 !important;
-}
-.bg-teal {
-  background-color: #009688 !important;
-}
-.bg-green {
-  background-color: #4caf50 !important;
-}
-.bg-lightgreen {
-  background-color: #8bc34a !important;
-}
-.bg-lime {
-  background-color: #cddc39 !important;
-}
-.bg-yellow {
-  background-color: #ffeb3b !important;
-}
-.bg-amber {
-  background-color: #ffc107 !important;
-}
-.bg-orange {
-  background-color: #ff9800 !important;
-}
-.bg-deeporange {
-  background-color: #ff5722 !important;
-}
-.bg-grey {
-  background-color: #9e9e9e !important;
-}
-.bg-darkgrey {
-  background-color: #5d5d5d !important;
-}
-.bg-bluegrey {
-  background-color: #607d8b !important;
-}
 
 /***************************************/
 /*****          Elevations         *****/
 /***************************************/
-
 .elevation-1 {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -586,4 +547,120 @@ a:focus {
 .elevation-2 {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+/***************************************/
+/*****          Colors             *****/
+/***************************************/
+/* Backgrounds */
+.bg-red {
+  background-color: var(--color-red) !important;
+}
+.bg-purple {
+  background-color: var(--color-purple) !important;
+}
+.bg-deeppurple {
+  background-color:var(--color-deeppurple) !important;
+}
+.bg-indigo {
+  background-color:var(--color-indigo) !important;
+}
+.bg-blue {
+  background-color:var(--color-blue) !important;
+}
+.bg-lightblue {
+  background-color:var(--color-lightblue) !important;
+}
+.bg-cyan {
+  background-color:var(--color-cyan) !important;
+}
+.bg-teal {
+  background-color:var(--color-teal) !important;
+}
+.bg-green {
+  background-color:var(--color-green) !important;
+}
+.bg-lightgreen {
+  background-color:var(--color-lightgreen) !important;
+}
+.bg-lime {
+  background-color:var(--color-lime) !important;
+}
+.bg-yellow {
+  background-color:var(--color-yellow) !important;
+}
+.bg-amber {
+  background-color:var(--color-amber) !important;
+}
+.bg-orange {
+  background-color:var(--color-orange) !important;
+}
+.bg-deeporange {
+  background-color:var(--color-deeporange) !important;
+}
+.bg-grey {
+  background-color:var(--color-grey) !important;
+}
+.bg-darkgrey {
+  background-color:var(--color-darkgrey) !important;
+}
+.bg-bluegrey {
+  background-color:var(--color-bluegrey) !important;
+}
+
+/* Text */
+.txt-red {
+  color: var(--color-red) !important;
+}
+.txt-purple {
+  color: var(--color-purple) !important;
+}
+.txt-deeppurple {
+  color:var(--color-deeppurple) !important;
+}
+.txt-indigo {
+  color:var(--color-indigo) !important;
+}
+.txt-blue {
+  color:var(--color-blue) !important;
+}
+.txt-lightblue {
+  color:var(--color-lightblue) !important;
+}
+.txt-cyan {
+  color:var(--color-cyan) !important;
+}
+.txt-teal {
+  color:var(--color-teal) !important;
+}
+.txt-green {
+  color:var(--color-green) !important;
+}
+.txt-lightgreen {
+  color:var(--color-lightgreen) !important;
+}
+.txt-lime {
+  color:var(--color-lime) !important;
+}
+.txt-yellow {
+  color:var(--color-yellow) !important;
+}
+.txt-amber {
+  color:var(--color-amber) !important;
+}
+.txt-orange {
+  color:var(--color-orange) !important;
+}
+.txt-deeporange {
+  color:var(--color-deeporange) !important;
+}
+.txt-grey {
+  color:var(--color-grey) !important;
+}
+.txt-darkgrey {
+  color:var(--color-darkgrey) !important;
+}
+.bg-bluegrey {
+  color:var(--color-bluegrey) !important;
 }
