@@ -21,37 +21,37 @@
   --color-primary-muted: rgba(49, 112, 143, 0.4);
   --color-accent: rgb(164, 210, 240);
   --color-accent-muted: rgba(164, 210, 240, 0.4);
-  --color-light: #FAFAFA;
-  --color-light-alt: #E7E7E7;
-  --color-dark: #211A1D;
-  --color-dark-alt: #2C2628;
+  --color-light: #fafafa;
+  --color-light-alt: #e7e7e7;
+  --color-dark: #211a1d;
+  --color-dark-alt: #2c2628;
   --color-overlay: rgba(0, 0, 0, 0.32);
 
   --color-anker-blue: #003056;
   --color-anker-lightblue: #a4d2f0;
 
-  --color-seacrew-blue:  #30728E; 
-  --color-seacrew-lightblue:  #738eb1;
+  --color-seacrew-blue: #30728e;
+  --color-seacrew-lightblue: #738eb1;
 
-  --color-red: #F44336;
-  --color-pink: #E91E63;
-  --color-purple: #E040FB;
-  --color-deeppurple: #673AB7;
-  --color-indigo: #536DFE;
-  --color-blue: #2196F3;
-  --color-lightblue: #03A9F4;
-  --color-cyan: #00BCD4;
+  --color-red: #f44336;
+  --color-pink: #e91e63;
+  --color-purple: #e040fb;
+  --color-deeppurple: #673ab7;
+  --color-indigo: #536dfe;
+  --color-blue: #2196f3;
+  --color-lightblue: #03a9f4;
+  --color-cyan: #00bcd4;
   --color-teal: #009688;
-  --color-green: #4CAF50;
-  --color-lightgreen: #8BC34A;
-  --color-lime: #CDDC39;
-  --color-yellow: #FFEB3B;
-  --color-amber: #FFC107;
-  --color-orange: #FF9800;
-  --color-deeporange: #FF5722;
-  --color-grey: #9E9E9E;
-  --color-darkgrey:  #5D5D5D; 
-  --color-bluegrey: #607D8B;
+  --color-green: #4caf50;
+  --color-lightgreen: #8bc34a;
+  --color-lime: #cddc39;
+  --color-yellow: #ffeb3b;
+  --color-amber: #ffc107;
+  --color-orange: #ff9800;
+  --color-deeporange: #ff5722;
+  --color-grey: #9e9e9e;
+  --color-darkgrey: #5d5d5d;
+  --color-bluegrey: #607d8b;
 
   /* Transitions */
   --transition-property: all;
@@ -88,14 +88,16 @@ a:hover {
   display: none;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 1030;
   background-color: var(--color-light);
-  height: 100vh;
-  width: 100vw;
 }
 
-.page-loader img{
+.page-loader img {
   position: absolute;
   height: var(--size-pageloader-logo);
   width: var(--size-pageloader-logo);
@@ -103,6 +105,42 @@ a:hover {
 
 .page-loader.visible {
   display: flex;
+}
+
+.loading-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 5px solid var(--color-anker-blue);
+  border-radius: 50%;
+  animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--color-anker-blue) transparent transparent transparent;
+}
+.loading-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loading-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loading-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /***************************************/
@@ -480,45 +518,6 @@ a:focus {
 .page-item.active .page-link {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
-}
-
-/***************************************/
-/*****        Loading ring         *****/
-/***************************************/
-.loading-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.loading-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 5px solid var(--color-anker-blue);
-  border-radius: 50%;
-  animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: var(--color-anker-blue) transparent transparent transparent;
-}
-.loading-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.loading-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.loading-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes loading-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /* MEDIA QUERIES */

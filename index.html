@@ -884,17 +884,19 @@
 
       // Event listeners
       sidebarToggle.on('click', () => {
-        sidebar.toggleClass('visible');
-        overlay.toggleClass('visible');
+        toggleSidebar();
       });
       overlay.on('click', () => {
-        sidebar.removeClass('visible');
-        overlay.removeClass('visible');
+        closeSidebar();
       });
       navLinks.on('click', (e) => {
         if (!e.target.classList.contains('navlink-dropdown')) {
+          showPageLoader();
           navLinks.removeClass('active');
           $(e.target).addClass('active');
+          if (isMobile()) {
+            closeSidebar();
+          }
         }
       });
 
@@ -903,14 +905,43 @@
         if (mql.matches) {
           // Small screen
           pageWrapper.addClass('is-mobile');
-          sidebar.removeClass('visible');
-          overlay.removeClass('visible');
+          closeSidebar();
         } else {
           // Large screen
           pageWrapper.removeClass('is-mobile');
-          sidebar.addClass('visible');
-          overlay.addClass('visible');
+          openSidebar();
         }
+      }
+
+      // Toggles sidebar
+      function toggleSidebar() {
+        sidebar.toggleClass('visible');
+        overlay.toggleClass('visible');
+      }
+
+      // Closes sidebar
+      function closeSidebar() {
+        sidebar.removeClass('visible');
+        overlay.removeClass('visible');
+      }
+
+      // Opens sidebar
+      function openSidebar() {
+        sidebar.addClass('visible');
+        overlay.addClass('visible');
+      }
+
+      // Returns if current view is mobile
+      function isMobile() {
+        return pageWrapper.hasClass('is-mobile');
+      }
+
+      // Briefly shows pageloader
+      function showPageLoader() {
+        pageLoader.addClass('visible');
+        setTimeout(function(){
+          pageLoader.removeClass('visible');
+        }, 1000);
       }
 
       // Datatable
