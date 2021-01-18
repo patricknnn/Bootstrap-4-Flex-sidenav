@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 /* ROOT */
 
 :root {
   /* Typography */
-  --font-size: 0.9rem;
+  --font-size: 0.8rem;
 
   /* Sizing */
   --height-topbar: 56px;
@@ -13,8 +13,10 @@
   --size-sidebar-logo: 40px;
   --size-collapse-icon: 12px;
   --size-card-icon: 35px;
+  --size-card-icon-font: 28px;
   --size-button-icon: 48px;
   --size-button-icon-font: 24px;
+  --height-form-group-row: 24px;
 
   /* Colors */
   --color-primary: rgb(49, 112, 143);
@@ -81,6 +83,14 @@ a:hover {
   color: inherit;
 }
 
+p {
+  font-size: var(--font-size);
+}
+
+hr {
+  width: calc(100% - 1.5rem);
+  border-top: 1px solid var(--color-light-alt);
+}
 
 /***************************************/
 /*****         Page loader         *****/
@@ -144,7 +154,6 @@ a:hover {
   }
 }
 
-
 /***************************************/
 /*****         Page wrapper        *****/
 /***************************************/
@@ -155,7 +164,6 @@ a:hover {
   overflow: hidden;
   font-size: var(--font-size);
 }
-
 
 /***************************************/
 /*****          Overlay            *****/
@@ -177,7 +185,6 @@ a:hover {
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
-
 
 /***************************************/
 /*****          Sidebar            *****/
@@ -252,7 +259,6 @@ a:hover {
   flex-shrink: 0;
 }
 
-
 /***************************************/
 /*****          Main            *****/
 /***************************************/
@@ -264,7 +270,6 @@ a:hover {
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
-
 
 /***************************************/
 /*****          Topnav            *****/
@@ -291,6 +296,12 @@ a:hover {
   height: var(--height-topbar);
 }
 
+.topnav__title {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
 .topnav__profile a {
   display: flex;
   flex-direction: row;
@@ -304,7 +315,6 @@ a:hover {
   border-radius: 50%;
 }
 
-
 /***************************************/
 /*****          Content            *****/
 /***************************************/
@@ -317,6 +327,88 @@ a:hover {
   color: var(--color-dark);
 }
 
+.input_row {
+  margin-bottom: 15px;
+}
+
+/***************************************/
+/*****          Forms              *****/
+/***************************************/
+.form-control-sm {
+  height: var(--height-form-group-row);
+  line-height: 1;
+  color: var(--color-dark);
+  font-size: var(--font-size);
+}
+
+.form-control-sm:focus {
+  color: var(--color-dark);
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-compact .form-group {
+  margin-bottom: 0;
+}
+
+.form-compact .input-group {
+  margin-bottom: 0px;
+}
+.form-compact .input-group-btn {
+  height: var(--height-form-group-row);
+}
+.form-compact .input-group-btn a {
+  height: var(--height-form-group-row);
+  width: max-content;
+  min-width: 80px;
+  margin-right: 0px;
+}
+.form-compact .input-group-addon {
+  color: #5a738e;
+}
+
+.form-compact .control-label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 500;
+  font-size: var(--font-size);
+}
+
+.form-compact .form-control {
+  height: var(--height-form-group-row);
+  padding: 0rem 0.5rem;
+  line-height: 1;
+  color: var(--color-dark);
+  font-size: var(--font-size);
+}
+
+.form-compact .form-control:focus {
+  color: var(--color-dark);
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: none;
+}
+
+.collapse-form {
+  margin-top: 5px;
+}
+
+.collapse-form .table {
+  margin-bottom: 0px;
+}
+
+.form-planning .form-group {
+  margin-bottom: 5px;
+}
+
+.form-control-checkbox {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  height: 14px !important;
+  width: 14px !important;
+}
 
 /***************************************/
 /*****          Collapse icon      *****/
@@ -336,7 +428,6 @@ a:hover {
 .show .collapse-icon {
   transform: rotateX(180deg);
 }
-
 
 /***************************************/
 /*****          Buttons            *****/
@@ -363,7 +454,6 @@ a:focus {
   height: var(--size-button-icon);
   font-size: var(--size-button-icon-font);
 }
-
 
 /***************************************/
 /*****          Dropdowns          *****/
@@ -396,7 +486,6 @@ a:focus {
 .dropdown-menu .dropdown-item i:first-child {
   width: 24px;
 }
-
 
 /***************************************/
 /*****          Navs               *****/
@@ -438,7 +527,6 @@ a:focus {
   border-radius: 0.25rem;
 }
 
-
 /***************************************/
 /*****          Cards              *****/
 /***************************************/
@@ -450,11 +538,11 @@ a:focus {
 .card-header {
   background-color: transparent;
   margin: 0 0.75rem;
-  padding: 0.5rem 0.25rem;
+  padding: 0.75rem 0rem;
   border-bottom: 1px solid var(--color-light-alt);
 }
 .card-header .card-title {
-  margin-top: -1.5rem;
+  margin-bottom: 0rem;
 }
 
 .card-body {
@@ -470,20 +558,19 @@ a:focus {
 
 .card-icon {
   border-radius: 0.25rem;
-  padding: 0.75rem;
+  padding: 0.5rem;
 }
 
 .card-icon i {
   color: var(--color-light);
   display: inline-block;
   white-space: nowrap;
-  font-size: 28px;
+  font-size: var(--size-card-icon-font);
   line-height: var(--size-card-icon);
   width: var(--size-card-icon);
   height: var(--size-card-icon);
   text-align: center;
 }
-
 
 /***************************************/
 /*****          Tables             *****/
@@ -508,15 +595,15 @@ a:focus {
 }
 
 .table thead tr th::before {
-  bottom: 0.75em !important;
+  bottom: 0.5em !important;
 }
 .table thead tr th::after {
-  bottom: 0.75em !important;
+  bottom: 0.5em !important;
 }
 
 .table td,
 .table th {
-  padding: 0.5rem;
+  padding: 0.25rem;
   vertical-align: top;
   border-top: 1px solid var(--color-light-alt);
 }
@@ -535,7 +622,6 @@ a:focus {
   border-color: var(--color-primary);
 }
 
-
 /***************************************/
 /*****          Elevations         *****/
 /***************************************/
@@ -549,7 +635,6 @@ a:focus {
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-
 /***************************************/
 /*****          Colors             *****/
 /***************************************/
@@ -561,52 +646,52 @@ a:focus {
   background-color: var(--color-purple) !important;
 }
 .bg-deeppurple {
-  background-color:var(--color-deeppurple) !important;
+  background-color: var(--color-deeppurple) !important;
 }
 .bg-indigo {
-  background-color:var(--color-indigo) !important;
+  background-color: var(--color-indigo) !important;
 }
 .bg-blue {
-  background-color:var(--color-blue) !important;
+  background-color: var(--color-blue) !important;
 }
 .bg-lightblue {
-  background-color:var(--color-lightblue) !important;
+  background-color: var(--color-lightblue) !important;
 }
 .bg-cyan {
-  background-color:var(--color-cyan) !important;
+  background-color: var(--color-cyan) !important;
 }
 .bg-teal {
-  background-color:var(--color-teal) !important;
+  background-color: var(--color-teal) !important;
 }
 .bg-green {
-  background-color:var(--color-green) !important;
+  background-color: var(--color-green) !important;
 }
 .bg-lightgreen {
-  background-color:var(--color-lightgreen) !important;
+  background-color: var(--color-lightgreen) !important;
 }
 .bg-lime {
-  background-color:var(--color-lime) !important;
+  background-color: var(--color-lime) !important;
 }
 .bg-yellow {
-  background-color:var(--color-yellow) !important;
+  background-color: var(--color-yellow) !important;
 }
 .bg-amber {
-  background-color:var(--color-amber) !important;
+  background-color: var(--color-amber) !important;
 }
 .bg-orange {
-  background-color:var(--color-orange) !important;
+  background-color: var(--color-orange) !important;
 }
 .bg-deeporange {
-  background-color:var(--color-deeporange) !important;
+  background-color: var(--color-deeporange) !important;
 }
 .bg-grey {
-  background-color:var(--color-grey) !important;
+  background-color: var(--color-grey) !important;
 }
 .bg-darkgrey {
-  background-color:var(--color-darkgrey) !important;
+  background-color: var(--color-darkgrey) !important;
 }
 .bg-bluegrey {
-  background-color:var(--color-bluegrey) !important;
+  background-color: var(--color-bluegrey) !important;
 }
 
 /* Text */
@@ -617,50 +702,50 @@ a:focus {
   color: var(--color-purple) !important;
 }
 .txt-deeppurple {
-  color:var(--color-deeppurple) !important;
+  color: var(--color-deeppurple) !important;
 }
 .txt-indigo {
-  color:var(--color-indigo) !important;
+  color: var(--color-indigo) !important;
 }
 .txt-blue {
-  color:var(--color-blue) !important;
+  color: var(--color-blue) !important;
 }
 .txt-lightblue {
-  color:var(--color-lightblue) !important;
+  color: var(--color-lightblue) !important;
 }
 .txt-cyan {
-  color:var(--color-cyan) !important;
+  color: var(--color-cyan) !important;
 }
 .txt-teal {
-  color:var(--color-teal) !important;
+  color: var(--color-teal) !important;
 }
 .txt-green {
-  color:var(--color-green) !important;
+  color: var(--color-green) !important;
 }
 .txt-lightgreen {
-  color:var(--color-lightgreen) !important;
+  color: var(--color-lightgreen) !important;
 }
 .txt-lime {
-  color:var(--color-lime) !important;
+  color: var(--color-lime) !important;
 }
 .txt-yellow {
-  color:var(--color-yellow) !important;
+  color: var(--color-yellow) !important;
 }
 .txt-amber {
-  color:var(--color-amber) !important;
+  color: var(--color-amber) !important;
 }
 .txt-orange {
-  color:var(--color-orange) !important;
+  color: var(--color-orange) !important;
 }
 .txt-deeporange {
-  color:var(--color-deeporange) !important;
+  color: var(--color-deeporange) !important;
 }
 .txt-grey {
-  color:var(--color-grey) !important;
+  color: var(--color-grey) !important;
 }
 .txt-darkgrey {
-  color:var(--color-darkgrey) !important;
+  color: var(--color-darkgrey) !important;
 }
 .bg-bluegrey {
-  color:var(--color-bluegrey) !important;
+  color: var(--color-bluegrey) !important;
 }
