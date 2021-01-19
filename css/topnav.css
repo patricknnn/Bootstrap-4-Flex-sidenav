@@ -1,0 +1,43 @@
+/***************************************/
+/*****          Topnav            *****/
+/***************************************/
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  top: 0px;
+  width: 100%;
+  z-index: 4;
+  border-bottom: 1px solid #d9dee4;
+  background-color: var(--color-light-alt);
+  color: var(--color-dark);
+}
+
+.topnav__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 0px 16px;
+  height: var(--height-topbar);
+}
+
+.topnav__title {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.topnav__profile a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.topnav__profile .profile-image {
+  height: calc(var(--height-topbar) - 20px);
+  width: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+}

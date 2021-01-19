@@ -1,0 +1,128 @@
+/***************************************/
+/*****          Elevations         *****/
+/***************************************/
+.elevation-1 {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.elevation-2 {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+/***************************************/
+/*****          Colors             *****/
+/***************************************/
+/* Backgrounds */
+.bg-red {
+  background-color: var(--color-red) !important;
+}
+.bg-purple {
+  background-color: var(--color-purple) !important;
+}
+.bg-deeppurple {
+  background-color: var(--color-deeppurple) !important;
+}
+.bg-indigo {
+  background-color: var(--color-indigo) !important;
+}
+.bg-blue {
+  background-color: var(--color-blue) !important;
+}
+.bg-lightblue {
+  background-color: var(--color-lightblue) !important;
+}
+.bg-cyan {
+  background-color: var(--color-cyan) !important;
+}
+.bg-teal {
+  background-color: var(--color-teal) !important;
+}
+.bg-green {
+  background-color: var(--color-green) !important;
+}
+.bg-lightgreen {
+  background-color: var(--color-lightgreen) !important;
+}
+.bg-lime {
+  background-color: var(--color-lime) !important;
+}
+.bg-yellow {
+  background-color: var(--color-yellow) !important;
+}
+.bg-amber {
+  background-color: var(--color-amber) !important;
+}
+.bg-orange {
+  background-color: var(--color-orange) !important;
+}
+.bg-deeporange {
+  background-color: var(--color-deeporange) !important;
+}
+.bg-grey {
+  background-color: var(--color-grey) !important;
+}
+.bg-darkgrey {
+  background-color: var(--color-darkgrey) !important;
+}
+.bg-bluegrey {
+  background-color: var(--color-bluegrey) !important;
+}
+
+/* Text */
+.txt-red {
+  color: var(--color-red) !important;
+}
+.txt-purple {
+  color: var(--color-purple) !important;
+}
+.txt-deeppurple {
+  color: var(--color-deeppurple) !important;
+}
+.txt-indigo {
+  color: var(--color-indigo) !important;
+}
+.txt-blue {
+  color: var(--color-blue) !important;
+}
+.txt-lightblue {
+  color: var(--color-lightblue) !important;
+}
+.txt-cyan {
+  color: var(--color-cyan) !important;
+}
+.txt-teal {
+  color: var(--color-teal) !important;
+}
+.txt-green {
+  color: var(--color-green) !important;
+}
+.txt-lightgreen {
+  color: var(--color-lightgreen) !important;
+}
+.txt-lime {
+  color: var(--color-lime) !important;
+}
+.txt-yellow {
+  color: var(--color-yellow) !important;
+}
+.txt-amber {
+  color: var(--color-amber) !important;
+}
+.txt-orange {
+  color: var(--color-orange) !important;
+}
+.txt-deeporange {
+  color: var(--color-deeporange) !important;
+}
+.txt-grey {
+  color: var(--color-grey) !important;
+}
+.txt-darkgrey {
+  color: var(--color-darkgrey) !important;
+}
+.bg-bluegrey {
+  color: var(--color-bluegrey) !important;
+}

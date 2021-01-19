@@ -1,0 +1,104 @@
+/***************************************/
+/*****          Forms              *****/
+/***************************************/
+.form-control-sm {
+  height: var(--height-form-group-row);
+  line-height: 1;
+  color: var(--color-dark);
+  font-size: var(--font-size);
+}
+
+.form-control-sm:focus {
+  color: var(--color-dark);
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-compact .form-group {
+  margin-bottom: 0.25rem;
+}
+
+.form-compact .input-group {
+  margin-bottom: 0px;
+}
+.form-compact .input-group-btn {
+  height: var(--height-form-group-row);
+}
+.form-compact .input-group-btn a {
+  height: var(--height-form-group-row);
+  width: max-content;
+  min-width: 80px;
+  margin-right: 0px;
+}
+.form-compact .input-group-addon {
+  color: #5a738e;
+}
+
+.form-compact .control-label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 500;
+  font-size: var(--font-size);
+}
+
+.form-compact .form-control {
+  height: var(--height-form-group-row);
+  padding: 0rem 0.5rem;
+  line-height: var(--height-form-group-row);
+  color: var(--color-dark);
+  font-size: var(--font-size);
+}
+
+.form-compact .form-control:focus {
+  color: var(--color-dark);
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: none;
+}
+
+.collapse-form {
+  margin-top: 5px;
+}
+
+.collapse-form .table {
+  margin-bottom: 0px;
+}
+
+.form-planning .form-group {
+  margin-bottom: 5px;
+}
+
+.form-control-checkbox {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  height: 14px !important;
+  width: 14px !important;
+}
+
+/***************************************/
+/*****    Material form Group      *****/
+/***************************************/
+.material-form-group {
+  padding: 0rem 0.25rem;
+  border: 1px solid var(--color-input-outline);
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.material-form-group label {
+  position: relative;
+  top: -0.75rem;
+  margin-bottom: 0;
+  padding: 0 0.5rem;
+  background-color: #fff;
+  font-size: calc(var(--font-size) - 0.1rem);
+}
+
+.material-form-group input,
+.material-form-group select {
+  margin-top: -1rem;
+  margin-bottom: 3px;
+  border: none;
+}

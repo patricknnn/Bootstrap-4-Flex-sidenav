@@ -1,0 +1,25 @@
+/***************************************/
+/*****          Buttons            *****/
+/***************************************/
+
+button:focus,
+a:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.btn-clean {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: var(--size-button-icon);
+  height: var(--size-button-icon);
+  font-size: var(--size-button-icon-font);
+}

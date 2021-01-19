@@ -19,7 +19,7 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-html5-1.6.5/sb-1.0.1/datatables.min.css" />
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -217,7 +217,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <i class="fas fa-shield-virus"></i>
+                    <i class="fas fa-ship"></i>
                     Vessels
                   </a>
                 </li>
@@ -385,11 +385,11 @@
                           <label class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label">Select</label>
                           <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                             <select class="form-control">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                              <option>Option 4</option>
+                              <option>Option 5</option>
                             </select>
                           </div>
                         </div>
@@ -967,97 +967,9 @@
   <script type="text/javascript"
     src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-html5-1.6.5/sb-1.0.1/datatables.min.js"></script>
 
-  <!-- Custom scripts -->
-  <script type="text/javascript">
-    $(function () {
-      // Define variables
-      var pageWrapper = $('#pageWrapper');
-      var pageLoader = $('#pageLoader');
-      var sidebar = $('#sidebar');
-      var sidebarToggle = $('#sidebarToggle');
-      var overlay = $('#overlay');
-      var navLinks = $('.nav-link');
-      var mql = window.matchMedia('(max-width: 768px)');
+  <!-- Theme scripts -->
+  <script type="text/javascript" src="js/theme.js"></script>
 
-      // init screen
-      responsive(mql);
-
-      // Re-init screen on media change
-      mql.addEventListener('change', responsive);
-
-      // Event listeners
-      sidebarToggle.on('click', () => {
-        toggleSidebar();
-      });
-      overlay.on('click', () => {
-        closeSidebar();
-      });
-      navLinks.on('click', (e) => {
-        if (!e.target.classList.contains('navlink-dropdown')) {
-          navLinks.removeClass('active');
-          $(e.target).addClass('active');
-          if (isMobile()) {
-            setTimeout(closeSidebar, 150);
-          }
-        }
-      });
-
-      // Sets correct styling based on screen width
-      function responsive(mql) {
-        if (mql.matches) {
-          // Small screen
-          pageWrapper.addClass('is-mobile');
-          closeSidebar();
-        } else {
-          // Large screen
-          pageWrapper.removeClass('is-mobile');
-          openSidebar();
-        }
-      }
-
-      // Toggles sidebar
-      function toggleSidebar() {
-        sidebar.toggleClass('visible');
-        overlay.toggleClass('visible');
-      }
-
-      // Closes sidebar
-      function closeSidebar() {
-        sidebar.removeClass('visible');
-        overlay.removeClass('visible');
-      }
-
-      // Opens sidebar
-      function openSidebar() {
-        sidebar.addClass('visible');
-        overlay.addClass('visible');
-      }
-
-      // Shows pageloader
-      function showPageLoader() {
-        pageLoader.addClass('visible');
-      }
-
-      // Shows pageloader
-      function hidePageLoader() {
-        pageLoader.removeClass('visible');
-      }
-
-      // Returns if current view is mobile
-      function isMobile() {
-        return pageWrapper.hasClass('is-mobile');
-      }
-
-      // Datatable
-      $('#exampleTable').DataTable();
-
-      // Remove loading
-      setTimeout(function () {
-        pageLoader.removeClass('visible');
-      }, 150);
-
-    });
-  </script>
 </body>
 
 </html>
