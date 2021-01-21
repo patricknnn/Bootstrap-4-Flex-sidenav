@@ -2,8 +2,14 @@
 /*****          Sidebar            *****/
 /***************************************/
 .sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 100%;
   width: 0px;
@@ -11,6 +17,10 @@
   z-index: 6;
   background-color: var(--color-dark);
   color: var(--color-light);
+  -webkit-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
+  -o-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
@@ -20,6 +30,8 @@
 
 .is-mobile .sidebar {
   position: fixed;
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
@@ -30,13 +42,22 @@
 }
 
 .sidebar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   padding: 16px 8px 4px;
 }
 .sidebar__header .sidebar__logo {
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 10px;
 }
@@ -48,13 +69,22 @@
   border-radius: 50%;
 }
 .sidebar__header .sidebar__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   white-space: nowrap;
 }
 
 .sidebar__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow-y: auto;
   overflow-x: hidden;
@@ -68,5 +98,6 @@
 }
 
 .sidebar__footer {
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }

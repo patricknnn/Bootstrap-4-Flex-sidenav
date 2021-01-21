@@ -4,9 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 @import url("buttons.css");
 @import url("cards.css");
+@import url("content.css");
 @import url("forms.css");
 @import url("helpers.css");
-@import url("loader.css");
+@import url("loaders.css");
 @import url("sidebar.css");
 @import url("tables.css");
 @import url("topnav.css");
@@ -105,10 +106,18 @@ hr {
   border-top: 1px solid var(--color-light-alt);
 }
 
+.udsp_default {
+  -webkit-box-flex: 1 !important;
+  -ms-flex-positive: 1 !important;
+  flex-grow: 1 !important;
+}
+
 /***************************************/
 /*****         Page wrapper        *****/
 /***************************************/
 .page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -128,65 +137,45 @@ hr {
   height: 100%;
   z-index: 5;
   background-color: var(--color-overlay);
+  -webkit-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
+  -o-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
 .is-mobile .overlay.visible {
   display: block !important;
+  -webkit-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
+  -o-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
-
 
 /***************************************/
 /*****          Main            *****/
 /***************************************/
 .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: hidden;
+  -webkit-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
+  -o-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
-
-
-/***************************************/
-/*****          Content            *****/
-/***************************************/
-.content {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  height: 100%;
-  background-color: var(--color-light);
-  color: var(--color-dark);
-}
-
-.input_row {
-  margin-bottom: 15px;
-}
-
-
-/***************************************/
-/*****          Collapse icon      *****/
-/***************************************/
-.collapse-icon {
-  font-size: var(--size-collapse-icon);
-  width: auto;
-  height: auto;
-  margin-left: auto;
-  color: inherit;
-  transform: none;
-  transition: var(--transition-property) var(--transition-duration)
-    var(--transition-timing-function) var(--transition-delay);
-}
-
-.collapsed .collapse-icon,
-.show .collapse-icon {
-  transform: rotateX(180deg);
-}
-
 
 /***************************************/
 /*****          Dropdowns          *****/
@@ -203,7 +192,11 @@ hr {
 }
 
 .dropdown-menu .dropdown-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: calc(100% - 16px);
   padding: 0.25rem 1rem;
@@ -224,12 +217,20 @@ hr {
 /*****          Navs               *****/
 /***************************************/
 .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 4px 8px;
   padding: 0.5rem;
   white-space: nowrap;
   color: inherit;
+  -webkit-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
+  -o-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
   transition: var(--transition-property) var(--transition-duration)
     var(--transition-timing-function) var(--transition-delay);
 }
@@ -241,13 +242,21 @@ hr {
 .nav-pills .show > .nav-link {
   color: var(--color-light);
   background-color: var(--color-primary);
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .nav-link i:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 30px;
   margin-right: 1rem;
@@ -260,8 +269,28 @@ hr {
   border-radius: 0.25rem;
 }
 
+/***************************************/
+/*****          Collapse icon      *****/
+/***************************************/
+.collapse-icon {
+  font-size: var(--size-collapse-icon);
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  color: inherit;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
+  -o-transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
+  transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function) var(--transition-delay);
+}
 
-
-
-
-
+.collapsed .collapse-icon,
+.show .collapse-icon {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}

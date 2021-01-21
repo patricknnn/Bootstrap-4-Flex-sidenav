@@ -12,7 +12,8 @@
   color: var(--color-dark);
   border-color: var(--color-primary);
   outline: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .form-compact .form-group {
@@ -27,6 +28,8 @@
 }
 .form-compact .input-group-btn a {
   height: var(--height-form-group-row);
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   min-width: 80px;
   margin-right: 0px;
@@ -36,8 +39,12 @@
 }
 
 .form-compact .control-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   font-weight: 500;
   font-size: var(--font-size);
@@ -55,7 +62,8 @@
   color: var(--color-dark);
   border-color: var(--color-primary);
   outline: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .collapse-form {
