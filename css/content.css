@@ -9,8 +9,8 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: auto;
-  height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
   background-color: var(--color-light);
   color: var(--color-dark);
 }
