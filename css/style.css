@@ -471,12 +471,12 @@ hr {
 }
 
 .card-icon {
+  color: var(--color-light);
   border-radius: 0.25rem;
   padding: 0.5rem;
 }
 
 .card-icon i {
-  color: var(--color-light);
   display: inline-block;
   white-space: nowrap;
   font-size: var(--size-card-icon-font);
@@ -484,6 +484,19 @@ hr {
   width: var(--size-card-icon);
   height: var(--size-card-icon);
   text-align: center;
+}
+
+/* Login */
+.card-login {
+  max-width: 350px;
+}
+
+.card-login-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+  margin-bottom: 1rem;
 }
 
 /***************************************/
@@ -1004,6 +1017,18 @@ hr {
 /*****          Colors             *****/
 /***************************************/
 /* Backgrounds */
+.bg-anker-blue {
+  background-color: var(--color-anker-blue) !important;
+}
+.bg-anker-lightblue {
+  background-color: var(--color-anker-lightblue) !important;
+}
+.bg-seacrew-blue {
+  background-color: var(--color-seacrew-blue) !important;
+}
+.bg-seacrew-lightblue {
+  background-color: var(--color-seacrew-lightblue) !important;
+}
 .bg-red {
   background-color: var(--color-red) !important;
 }
@@ -1060,6 +1085,12 @@ hr {
 }
 
 /* Text */
+.txt-light {
+  color: var(--color-light) !important;
+}
+.txt-dark {
+  color: var(--color-dark) !important;
+}
 .txt-red {
   color: var(--color-red) !important;
 }
