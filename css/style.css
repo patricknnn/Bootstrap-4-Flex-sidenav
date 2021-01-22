@@ -505,12 +505,11 @@ hr {
   text-align: center;
 }
 
-/* Login */
-.card-login {
+.card-narrow {
   max-width: 350px;
 }
 
-.card-login-img {
+.card-center-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
