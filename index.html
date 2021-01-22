@@ -2,35 +2,52 @@
 <html>
 
 <head>
+  <!-- Uniface -->
+  <meta name="Default" content="Uniface 9">
+  <link rel="stylesheet" type="text/css" href="../css/udsp.css">
+
+  <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+  <!-- Title -->
   <title>Anker Seacrew</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon-16x16.png">
 
   <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="vendors/fontawesome-5.15.2/css/all.min.css">
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-
-  <!-- Font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
-  <!-- Datatables -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-html5-1.6.5/sb-1.0.1/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="vendors/bootstrap-4.6.0/css/bootstrap.min.css" />
 
   <!-- Simplebar -->
-  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" type="text/css" href="vendors/simplebar-5.3.0/dist/simplebar.min.css" />
 
-  <!-- Styles -->
+  <!-- Dropzone -->
+  <link rel="stylesheet" type="text/css" href="vendors/dropzone-5.7.0/dist/min/dropzone.min.css" />
+
+  <!-- DataTables (includes extensions) -->
+  <link rel="stylesheet" type="text/css" href="vendors/dataTables-1.10.23/datatables.min.css" />
+
+  <!-- jsGantt -->
+  <link rel="stylesheet" type="text/css" href="vendors/jsgantt-improved-1.8.0/dist/jsgantt.css" />
+
+  <!-- Chart -->
+  <link rel="stylesheet" type="text/css" href="vendors/chartjs-2.9.4/dist/Chart.min.css" />
+
+  <!-- select2 -->
+  <link rel="stylesheet" type="text/css" href="vendors/select2-4.1.0-beta.1/dist/css/select2.min.css" />
+
+  <!-- jQuery Smartwizard -->
+  <link rel="stylesheet" type="text/css" href="vendors/jquery-smartwizard-5.1.1/dist/css/smart_wizard_all.min.css" />
+
+  <!-- Theme styles -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -983,25 +1000,57 @@
   </div> <!-- /Page wrapper -->
 
   <!-- jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="vendors/jQuery-3.5.1/jquery.min.js"></script>
 
-  <!-- Popper.JS -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <!-- Popper -->
+  <script type="text/javascript" src="vendors/popperjs-2.6.0/popper.min.js"></script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
+  <script type="text/javascript" src="vendors/bootstrap-4.6.0/js/bootstrap.min.js"></script>
 
-  <!-- Datatables -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-  <script type="text/javascript"
-    src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-html5-1.6.5/sb-1.0.1/datatables.min.js"></script>
+  <!-- Bootbox -->
+  <script type="text/javascript" src="vendors/bootbox-5.5.2/bootbox.min.js"></script>
+
+  <!-- Parsley -->
+  <script type="text/javascript" src="vendors/parsley-2.9.2/dist/parsley.min.js"></script>
+
+  <!-- Datatables (includes extensions) -->
+  <script type="text/javascript" src="vendors/dataTables-1.10.23/datatables.min.js"></script>
+
+  <!-- Moment -->
+  <script type="text/javascript" src="vendors/moment-2.29.1/moment.min.js"></script>
+
+  <!-- jsGantt -->
+  <script type="text/javascript" src="vendors/jsgantt-improved-1.8.0/dist/jsgantt.js"></script>
+
+  <!-- Chart -->
+  <script type="text/javascript" src="vendors/chartjs-2.9.4/dist/Chart.min.js"></script>
+
+  <!-- Dropzone -->
+  <script type="text/javascript" src="vendors/dropzone-5.7.0/dist/min/dropzone.min.js"></script>
+
+  <!-- Ckeditor -->
+  <script type="text/javascript" src="vendors/ckeditor-4.15.1/ckeditor.js"></script>
+
+  <!-- Html2pdf -->
+  <script type="text/javascript" src="vendors/html2pdf-0.9.2/dist/html2pdf.bundle.min.js"></script>
+
+  <!-- Select2 -->
+  <script type="text/javascript" src="vendors/select2-4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+  <!-- jQuery Dirty -->
+  <script type="text/javascript" src="vendors/jquery.dirty-0.8.1/dist/jquery.dirty.js"></script>
 
   <!-- Simplebar -->
-  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script type="text/javascript" src="vendors/simplebar-5.3.0/dist/simplebar.min.js"></script>
+
+  <!-- jQuery Smartwizard -->
+  <script type="text/javascript" src="vendors/jquery-smartwizard-5.1.1/dist/js/jquery.smartWizard.min.js"></script>
 
   <!-- Theme scripts -->
   <script type="text/javascript" src="js/theme.js"></script>
+  <script type="text/javascript" src="js/noback.js"></script>
+  <script type="text/javascript" src="js/crmbuild.js"></script>
 
 </body>
 
