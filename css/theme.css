@@ -2,12 +2,20 @@
 /*****          Alerts             *****/
 /***************************************/
 .alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .alert span {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .alert-dismissible {
@@ -38,7 +46,8 @@
 
 .btn-clean:focus,
 .btn-close:focus {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .btn-clean:hover {
@@ -63,9 +72,15 @@
 
 /* Close */
 .btn-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .btn-close i {
   font-size: 1rem;
@@ -158,7 +173,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 3rem;
+  padding: 0 3.5rem;
   margin-bottom: 1rem;
 }
 
@@ -576,14 +591,7 @@
   animation-timing-function: linear;
   background: darkgray;
   background: -o-linear-gradient(left, #eeeeee 10%, #dddddd 30%, #eeeeee 60%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(10%, #eeeeee),
-    color-stop(30%, #dddddd),
-    color-stop(60%, #eeeeee)
-  );
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #eeeeee), color-stop(30%, #dddddd), color-stop(60%, #eeeeee));
   background: linear-gradient(to right, #eeeeee 10%, #dddddd 30%, #eeeeee 60%);
   background-size: 200% 100%;
   height: 100%;
